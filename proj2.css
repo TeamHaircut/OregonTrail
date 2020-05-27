@@ -1,0 +1,201 @@
+table{
+	width:33%;
+	margin-left: 27em;
+}
+
+/* Row headings have space between itself and following row*/
+tr, th{
+	padding-bottom: 20px;
+}
+
+tr, th, td{
+	width: auto;
+}
+
+body{
+	background-color: black;
+	color: white;
+}
+
+/* Fonts for everything generic */
+p, tr, th, td, .normalFont {
+	font-family: Courier, monospace;
+}
+
+/* Everything that needs to be centered */
+tr, th, td, .textAlignCenter, .title{
+	text-align: center;
+}
+
+.marginTop{
+	margin-top: 5em;
+}
+
+.learnTrailParagraph{
+	margin-left: 10em;
+	margin-right: 10em;
+	margin-top: 5em;
+}
+
+.optionInput {
+	background-color: black;
+	color: white;
+	border: none;
+}
+
+.options{
+	margin-left: 32em;
+}
+
+.title{
+	font-family: Rockwell, monospace;
+}
+
+.optionsList{
+	margin-left: 1.5em; /* tabbed over */
+}
+
+.centerParagraph{
+	margin-left: 25em;
+	margin-right: 25em;
+}
+
+.bordered{
+	border: solid white 2px;
+	margin-left: 32em;
+	margin-right: 32em;
+}
+
+.negativeColor{
+	color: black;
+	background-color: white;
+}
+
+.status{
+	background-color: white;
+	color: black;
+	border: none;
+	margin-right: 32em;
+	margin-left: 32em;
+	margin-bottom: .5em;
+	padding-left: .5em;
+}
+
+.rest{
+	background-color: black;
+	color: white;
+	border-color: white;
+	border-style: solid;
+	border-width: 5px;
+	margin-right: 38em;
+	margin-left: 38em;
+}
+
+.talk{
+	margin-right: 32em;
+	margin-left: 32em;
+	margin-top: 30px;
+}
+
+.buy{
+	margin-left: 39em;
+	margin-top: 30px;
+}
+
+.cash{
+	margin-left: 5em;
+}
+
+.fishing{
+    background-image: url("https://swe.umbc.edu/~fritzk1/OregonTrail/mainPages/images/fishing.png");
+    margin-bottom: 5em;
+    margin-left: 24em;
+}
+
+#wagon {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  margin-left: 170px;
+  margin-top: 30px;
+  background-image: url("mainPages/trail/images/ford.png");
+}
+
+#wheelCanvas {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin-top: 70px;
+}
+
+#ford {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  margin-left: 350px;
+  margin-top: 350px;
+  background-image: url("mainPages/trail/images/ford.png");
+}
+
+#riverCrossCanvas {
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+  border-color: white;
+  width: 1000px;
+  height: 600px;
+  margin-left:250px;
+  background-image: url("mainPages/trail/images/crossing.png");
+}
+
+.trailCanvas{
+  position: relative;
+  width: 900px;
+  height: 300px;
+  margin-left: 300px;
+  background-image: url("mainPages/trail/images/trail.jpg");
+
+}
+
+.front {
+  position: absolute;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  left: 210px;
+  top: 135px;
+}
+.back {
+  position: absolute;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  left: 262px;
+  top: 135px;
+}
+
+.moveWheel{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation-iteration-count: infinite;
+  background-image: url("mainPages/trail/images/wheel.png");
+
+}
+
+.front .moveWheel {
+  -webkit-animation: anticlockwise 12s;
+}
+.back .moveWheel {
+  -webkit-animation: anticlockwise 12s;
+}
+
+@-webkit-keyframes anticlockwise {
+  0% {
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
