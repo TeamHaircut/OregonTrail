@@ -17,9 +17,18 @@ body{
 	color: white;
 }
 
+@font-face {
+	font-family:"Here Lies MECC Regular";
+	src:url("fonts/here_lies_mecc.eot?") format("eot"),
+	url("fonts/here_lies_mecc.woff") format("woff"),
+	url("fonts/here_lies_mecc.ttf") format("truetype"),
+	url("fonts/here_lies_mecc.svg#Here-Lies-MECC") format("svg");
+	font-weight:normal;font-style:normal;
+}
+
 /* Fonts for everything generic */
 p, tr, th, td, .normalFont {
-	font-family: Courier, monospace;
+	font-family: "Here Lies MECC Regular";
 }
 
 /* Everything that needs to be centered */
@@ -38,9 +47,15 @@ tr, th, td, .textAlignCenter, .title{
 }
 
 .optionInput {
+	width: 10%;
 	background-color: black;
 	color: white;
 	border: none;
+}
+
+.alignCenter{
+	margin: auto;
+	width: 50%;
 }
 
 .options{
@@ -48,7 +63,7 @@ tr, th, td, .textAlignCenter, .title{
 }
 
 .title{
-	font-family: Rockwell, monospace;
+	font-family: "Here Lies MECC Regular", monospace;
 }
 
 .optionsList{
