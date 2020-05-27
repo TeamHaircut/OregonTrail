@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../../proj2.css">
+</head>
+<body>
+	<div class="title">
+		<h2>
+            Pace Levels
+		</h2>
+	</div>
+
+	<div class="options">
+		<p class="optionsList">
+			Steady - You travel 8 hours a day. You take many<br>
+			rests and rarely get very tired.<br><br>
+
+			Strenuous - You travel 12 hours a day, starting<br>
+			at sunrise and stopping at sunset. You stop <br>
+			to rest only when you must. You finish each<br>
+			day very tired.<br><br>
+
+			Grueling - You travel 16 hours a day, starting <br>
+			before dawn and going until dark. You rarely<br>
+			rest and sleep.  You finish each day exhausted<br>
+			and your health suffers.<br><br>
+		</p>
+    	</div>
+	<div class="title">Press SPACE BAR to continue</div>
+
+	<script>
+		document.body.onkeyup = function(e){
+    			if(e.keyCode == 32){
+				location.replace("pace.html");
+    			}
+		}
+	</script>
+</body>
+</html>
