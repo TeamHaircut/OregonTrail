@@ -88,8 +88,6 @@
 			2. Learn about the trail <br>
 			3. See the Oregon Top Ten<br>
 			<span id="sound">4. Turn sound off</span><br>
-			5. Choose Management Options <br>
-			6. End <br>
 		</p>
 			What is your choice?
 			<input class="optionInput normalFont" id="optionsChoice" type="text" name="quantity" min="1" max="6" onblur="this.focus()" autofocus>

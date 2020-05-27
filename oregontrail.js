@@ -18,7 +18,7 @@ $(document).ready(function(){
 	$(document).keydown(function(e){
 		if (e.keyCode == enterKey){ // enter key
 			var choice = parseInt($('#optionsChoice').val());
-			if(choice != NaN && choice <= 6 && choice >= 1){
+			if(choice != NaN && choice <= 4 && choice >= 1){
 				switch(choice){
 					case 1:
 						location.replace("gameSetup/jobSetup.html");
@@ -32,12 +32,12 @@ $(document).ready(function(){
 					case 4:
 						location.replace("homescreenPages/sound/sound.html");
 						break;
-					case 5:
+					/*case 5:
 						location.replace("homescreenPages/managementOptions/managementOptions.html");
 						break;
 					case 6:
 						location.replace("homescreenPages/end.html");
-						break;
+						break;*/
 					default:
 						;
 				} // end switch
