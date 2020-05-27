@@ -1,17 +1,18 @@
-<!-- Name: Kyle Fritz
-	 File: proj2.php
-	 Date Created: 4/14/17
+<!-- Name: TeamHaircut
+	 File: oregontrail.php
+	 Date Created: 5/27/20
 	 Description: Home screen
+	 Changes: Updated DB info, refactored filenames
 -->
 
 <?php
 	session_start();
 
 	/* For getting tombstone messages */
-	$servername = "studentdb-maria.gl.umbc.edu";
-	$username = "dschom1";
-	$password = "dschom1";
-	$dbname = "dschom1";
+	$servername = "localhost";
+	$username = "root";
+	$password = "oregontrail";
+	$dbname = "oregontrail";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -68,7 +69,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="proj2.css">
+	<link rel="stylesheet" type="text/css" href="oregontrail.css">
 </head>
 
 <body>
@@ -95,6 +96,6 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://swe.umbc.edu/~fritzk1/OregonTrail/changeSound.js" type="text/javascript"></script>
-	<script src="proj2.js" type="text/javascript"></script>
+	<script src="oregontrail.js" type="text/javascript"></script>
 </body>
 </html>

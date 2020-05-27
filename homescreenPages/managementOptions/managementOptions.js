@@ -18,10 +18,10 @@ function checkEnteredValue(e)
 					location.replace("eraseTombstoneMessages/eraseTombstoneMessages.php");
 					break;
 				case 5:
-					location.replace("../../proj2.php");
+					location.replace("../../oregontrail.php");
 					break;
 				default:
-					location.replace("../../proj2.php");
+					location.replace("../../oregontrail.php");
 				}
     	}
     }
