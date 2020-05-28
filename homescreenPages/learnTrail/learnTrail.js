@@ -25,7 +25,7 @@ document.body.onkeyup = function(e){
         		paragraph.innerHTML = "TeamHaircut Digital Network<br>www.teamhaircut.org<br>";
         		break;
         	default: // if something fails, or pageNum > 8...
-	        	location.replace("../../proj2.php"); // ... go back to homescreen
+	        	location.replace("../../oregontrail.php"); // ... go back to homescreen
 	        	break;
 
         }
