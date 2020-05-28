@@ -90,7 +90,7 @@
 			<span id="sound">4. Turn sound off</span><br>
 		</p>
 			What is your choice?
-			<input class="optionInput normalFont" id="optionsChoice" type="text" name="quantity" min="1" max="6" onblur="this.focus()" autofocus>
+			<input class="optionInput normalFont" id="optionsChoice" type="text" name="quantity" min="1" max="4" onblur="this.focus()" autofocus>
 	</div>
 
 	<div class="textAlignCenter">
