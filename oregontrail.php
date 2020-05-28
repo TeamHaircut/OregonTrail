@@ -73,16 +73,16 @@
 </head>
 
 <body alignHorizontal>
-<br><br><br><br><br>
 	<div class="title textAlignCenter">
 		<h1>
 			The Oregon Trail
 		</h1>
+		<img src="images/header.png">
+		<br>
 	</div>
-	<br>
 
 	<div class="normalFont alignCenter">
-		You may: <br>
+		<br>You may: <br>
 		<p class="optionsList">
 			1. Travel the trail <br>
 			2. Learn about the trail <br>
@@ -91,6 +91,11 @@
 		</p>
 			What is your choice?
 			<input class="optionInput normalFont" id="optionsChoice" type="text" name="quantity" min="1" max="6" onblur="this.focus()" autofocus>
+	</div>
+
+	<div class="textAlignCenter">
+		<br>
+		<img src="images/header.png">
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
