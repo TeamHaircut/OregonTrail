@@ -26,9 +26,16 @@ body{
 	font-weight:normal;font-style:normal;
 }
 
+@font-face {
+	font-family:"IFC INSANE RODEO";
+	src:url("fonts/IFC INSANE RODEO.woff") format("woff");
+	font-weight:normal;font-style:normal;
+}
+
 /* Fonts for everything generic */
 p, tr, th, td, .normalFont {
 	font-family: "Here Lies MECC Regular";
+	/*font-size: 105%;*/
 }
 
 /* Everything that needs to be centered */
@@ -53,6 +60,10 @@ tr, th, td, .textAlignCenter, .title{
 	border: none;
 }
 
+img {
+	width: 70%;
+}
+
 .alignCenter{
 	margin: auto;
 	width: 50%;
@@ -63,7 +74,12 @@ tr, th, td, .textAlignCenter, .title{
 }
 
 .title{
-	font-family: "Here Lies MECC Regular", monospace;
+	font-family: "IFC INSANE RODEO";
+	font-size: 400%;
+}
+
+h1 {
+	margin-bottom: 0px;
 }
 
 .optionsList{
