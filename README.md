@@ -1,3 +1,2 @@
 # OregonTrail
-Web-based JS Oregon Trail Clone
-test
+A Web-based Oregon Trail Clone
