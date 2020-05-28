@@ -11,11 +11,14 @@
 
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="https://swe.umbc.edu/~fritzk1/OregonTrail/proj2.css">
+	<link rel="stylesheet" type="text/css" href="../../oregontrail.css">
 </head>
 <body>
+	<div class="textAlignCenter">
+		<img src="../../images/header.png"><!--image of wagon train leaving independence (image2) -->
+	</div>
 
-	<div class="title textAlignCenter">
+	<div class="normalFont textAlignCenter">
 		<h2>Matt's General Store<br>
 			Independence, Missouri<br>
 			<span id="month"></span> 1, 1848
@@ -26,54 +29,49 @@
 	<div id="mainOptions">
 			<table id="storeTable">
 				<tr>
-					<th>1. Oxen</th>
-					<th>$0.00</th>
+					<td class="td-left">1. Oxen</td>
+					<td>$0.00</td>
 				</tr>
 				<tr>
-					<th>2. Food</th>
-					<th>$0.00</th>
+					<td class="td-left">2. Food</td>
+					<td>$0.00</td>
 				</tr>
 				<tr>
-					<th>3. Clothing</th>
-					<th>$0.00</th>
+					<td class="td-left">3. Clothing</td>
+					<td>$0.00</td>
 				</tr>
 				<tr>
-					<th>4. Fishing poles</th>
-					<th>$0.00</th>
+					<td class="td-left">4. Ammunition</td>
+					<td>$0.00</td>
 				</tr>
 				<tr>
-					<th>5. Wagon Wheels</th>
-					<th>$0.00</th>
+					<td class="td-left">5. Wagon Wheels</td>
+					<td>$0.00</td>
 				</tr>
 				<tr>
-					<th>6. Wagon axles</th>
-					<th>$0.00</th>
+					<td class="td-left">6. Wagon axles</td>
+					<td>$0.00</td>
 				</tr>
 				<tr>
-					<th>7. Wagon tongues</th>
-					<th>$0.00</th>
+					<td class="td-left">7. Wagon tongues</td>
+					<td>$0.00</td>
 				</tr>
 				<tr>
-					<th>Total bill: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
-					<th>$0.00</th>
+					<td class="td-left">Total bill: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+					<td>$0.00</td>
 				</tr>
 				<tr>
 					<th>Amount you have: &emsp;&emsp;&emsp;</th>
 					<th id="playerMoney"></th>
 				</tr>
 			</table>
-			<p class="centerParagraph">
-				<br>
-				Which item would you like to buy?
+		<br>
+		<p class="normalFont textAlignCenter">
+			Which item would you like to buy?<br>
 				<input class="optionInput" id="optionsChoice"
 				type="text" name="quantity" min="1" max="7"
-				onblur="this.focus()" autofocus>
-			</p>
-
-
-		<br>
-		<p class="title">
-			Press SPACE BAR to leave store
+				onblur="this.focus()" autofocus><br><br>
+			Press SPACE BAR to leave store 
 		</p>
     </div>
 
@@ -98,7 +96,7 @@
 
 	<div id="buyOxen" style="display: none">
     	<p class="centerParagraph">
-    		There are 2 oxen in a yoke;  I recommend at least 3 yoke.  I charge $40 a yoke.<br>
+    		There are 2 oxen in a yoke;  I recommend at least 3 yoke.  I charge $40 a yoke.<br><br>
     		How many yoke do you want?
     		<input class="optionInput" id="inputBuyOxen" type="text" name="quantity" min="1" max="9"
 			onblur="this.focus()" autofocus>
@@ -107,7 +105,7 @@
 	</div>
 	<div id="buyFood" style="display: none">
     	<p class="centerParagraph">
-    		I recommend you take at least 200 pounds of food for each person in your family.  I see that you have 5 people in all.  You'll need flour, sugar, bacon, and coffee.  My price is 20 cents a pound.<br>
+    		I recommend you take at least 200 pounds of food for each person in your family.  I see that you have 5 people in all.  You'll need flour, sugar, bacon, and coffee.  My price is 20 cents a pound.<br><br>
     		How many pounds of food do you want?
     		<input class="optionInput" id="inputBuyFood" type="text" name="quantity" min="0" max="2000"
 			onblur="this.focus()" autofocus>
@@ -116,7 +114,7 @@
 	</div>
 	<div id="buyClothing" style="display: none">
     	<p class="centerParagraph">
-    		You'll need warm clothing in the mountains.  I recommend taking at least 2 sets of clothes per person.  Each set is $10.00.<br>
+    		You'll need warm clothing in the mountains.  I recommend taking at least 2 sets of clothes per person.  Each set is $10.00.<br><br>
     		How many sets of clothes do you want?
     		<input class="optionInput" id="inputBuyClothing" type="text" name="quantity" min="0" max="99"
 			onblur="this.focus()" autofocus>
@@ -125,8 +123,8 @@
 	</div>
 	<div id="buyPoles" style="display: none">
     	<p class="centerParagraph">
-    		Fishing will let you supplement your food supply.  I sell fishing poles for $2.00 each.<br>
-    		How many fishing poles do you want?
+    		I sell ammunition in boxes of 20 bullets.  Each box costs $2.00.<br><br>
+    		How many boxes do you want?
     		<input class="optionInput" id="inputBuyPoles" type="text" name="quantity" min="0" max="99"
 			onblur="this.focus()" autofocus>
 			<br><br>
@@ -134,7 +132,7 @@
 	</div>
 	<div id="buyWheels" style="display: none">
     	<p class="centerParagraph">
-    		It's a good idea to have a few spare parts for your wagon.  Each wheel costs $10.00.<br>
+    		It's a good idea to have a few spare parts for your wagon.  Each wheel costs $10.00.<br><br>
     		How many wagon wheels do you want?
     		<input class="optionInput" id="inputBuyWheels" type="text" name="quantity" min="0" max="3"
 			onblur="this.focus()" autofocus>
@@ -143,7 +141,7 @@
 	</div>
 	<div id="buyAxles" style="display: none">
     	<p class="centerParagraph">
-    		It's a good idea to have a few spare parts for your wagon.  Each axle costs $10.00.<br>
+    		It's a good idea to have a few spare parts for your wagon.  Each axle costs $10.00.<br><br>
     		How many wagon axles do you want?
     		<input class="optionInput" id="inputBuyAxles" type="text" name="quantity" min="0" max="3"
 			onblur="this.focus()" autofocus>
@@ -152,7 +150,7 @@
 	</div>
 	<div id="buyTongues" style="display: none">
     	<p class="centerParagraph">
-    		It's a good idea to have a few spare parts for your wagon.  Each tongue costs $10.00.<br>
+    		It's a good idea to have a few spare parts for your wagon.  Each tongue costs $10.00.<br><br>
     		How many wagon tongues do you want?
     		<input class="optionInput" id="inputBuyTongues" type="text" name="quantity" min="0" max="3"
 			onblur="this.focus()" autofocus>
