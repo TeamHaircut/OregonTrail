@@ -1,6 +1,6 @@
 table{
-	width:33%;
-	margin-left: 27em;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Row headings have space between itself and following row*/
@@ -8,8 +8,13 @@ tr, th{
 	padding-bottom: 20px;
 }
 
-tr, th, td{
+tr, th{
 	width: auto;
+}
+
+.td-left{
+	width:auto;
+	text-align:left;
 }
 
 body{
@@ -33,13 +38,13 @@ body{
 }
 
 /* Fonts for everything generic */
-p, tr, th, td, .normalFont {
+p, tr, th, .normalFont {
 	font-family: "Here Lies MECC Regular";
 	/*font-size: 105%;*/
 }
 
 /* Everything that needs to be centered */
-tr, th, td, .textAlignCenter, .title{
+tr, th, .textAlignCenter, .title{
 	text-align: center;
 }
 
@@ -93,8 +98,10 @@ h1 {
 
 .bordered{
 	border: solid white 2px;
-	margin-left: 32em;
-	margin-right: 32em;
+	padding-left: 5px;
+	width: 45%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .negativeColor{
