@@ -16,13 +16,13 @@ document.body.onkeyup = function(e){
         		paragraph.innerHTML = "If for some reason you don't survive -- your wagon burns, or thieves steal you oxen, or you run out of provisions, or you die of cholera -- don't give up!  Try again...and again...until your name is up with the others on The Oregon Top Ten.";
         		break;
         	case 6:
-        		paragraphHead.innerHTML = "'.' key";
-        		paragraph.innerHTML = "You may turn the sound on or off during the program by pressing '.'";
+        		paragraphHead.innerHTML = "Control-S key";
+        		paragraph.innerHTML = "You may turn the sound on or off during the program by pressing Control-S";
         		break;
         	case 7:
-        		paragraphHead.innerHTML = "The software team responsible for creation of this product include: <br><br>	";
+        		paragraphHead.innerHTML = "Developed for the web by: <br><br>	";
         		paragraph.setAttribute("style", "text-align: center");
-        		paragraph.innerHTML = "Kyle Fritz<br>David Leiberg<br>Kush Patel<br>Daniel Schomisch<br><br><br>";
+        		paragraph.innerHTML = "TeamHaircut Digital Network<br>www.teamhaircut.org<br>";
         		break;
         	default: // if something fails, or pageNum > 8...
 	        	location.replace("../../proj2.php"); // ... go back to homescreen
