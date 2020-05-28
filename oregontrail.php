@@ -72,15 +72,16 @@
 	<link rel="stylesheet" type="text/css" href="oregontrail.css">
 </head>
 
-<body>
-
+<body alignHorizontal>
+<br><br><br><br><br>
 	<div class="title textAlignCenter">
-		<h2>
+		<h1>
 			The Oregon Trail
-		</h2>
+		</h1>
 	</div>
+	<br>
 
-	<div class="options normalFont">
+	<div class="normalFont alignCenter">
 		You may: <br>
 		<p class="optionsList">
 			1. Travel the trail <br>
@@ -88,10 +89,10 @@
 			3. See the Oregon Top Ten<br>
 			<span id="sound">4. Turn sound off</span><br>
 			5. Choose Management Options <br>
-			6. End <br><br>
+			6. End <br>
+		</p>
 			What is your choice?
 			<input class="optionInput normalFont" id="optionsChoice" type="text" name="quantity" min="1" max="6" onblur="this.focus()" autofocus>
-		</p>
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
