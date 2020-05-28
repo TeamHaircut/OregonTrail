@@ -4,15 +4,27 @@ function checkEnteredValue(e){
     if (e.keyCode == enterKey){ // enter key
 		switch(choice){
 			case 'n':
-				location.replace("../../proj2.php");
+				location.replace("../../oregontrail.php");
 				break;
 			case 'no':
-				location.replace("../../proj2.php");
+				location.replace("../../oregontrail.php");
+				break;
+			case 'N':
+				location.replace("../../oregontrail.php");
+				break;
+			case 'NO':
+				location.replace("../../oregontrail.php");
 				break;
 			case 'y':
 				location.replace("howPointsEarned/howPointsEarned.html");
 				break;
 			case 'yes':
+				location.replace("howPointsEarned/howPointsEarned.html");
+				break;
+			case 'Y':
+				location.replace("howPointsEarned/howPointsEarned.html");
+				break;
+			case 'YES':
 				location.replace("howPointsEarned/howPointsEarned.html");
 				break;
 			default:

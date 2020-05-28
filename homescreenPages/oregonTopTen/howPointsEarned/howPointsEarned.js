@@ -20,7 +20,7 @@ $('body').keyup(function(e){
 				$('#pointsTable').remove();
 				break;
 			default:
-				location.replace("../../../proj2.php");
+				location.replace("../../../oregontrail.php");
     	}
    }
 });
