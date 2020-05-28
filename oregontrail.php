@@ -72,7 +72,7 @@
 	<link rel="stylesheet" type="text/css" href="oregontrail.css">
 </head>
 
-<body alignHorizontal>
+<body>
 	<div class="title textAlignCenter">
 		<h1>
 			The Oregon Trail
