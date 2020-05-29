@@ -52,6 +52,12 @@ tr, th, .textAlignCenter, .title{
 	margin-top: 5em;
 }
 
+.boxed{
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .learnTrailParagraph{
 	margin-left: 10em;
 	margin-right: 10em;
