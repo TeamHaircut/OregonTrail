@@ -3,12 +3,12 @@
 	<link rel="stylesheet" type="text/css" href="../../oregontrail.css">
 </head>
 <body>
-	<div class="normalFont negativeColor textAlignCenter boxed">
+	<div class="normalFont negativeColor textAlignCenter paragraphAlignCenter">
 		<h2 id="dateLocation"></h2>
 	</div>
 
 	<div id="prices" class="buy"></div>
-	<div class="normalFont alignCenter"></div>
+	<div class="normalFont paragraphAlignCenter"></div>
 	<div>
 		<table>
 			<tr>
@@ -53,10 +53,10 @@
 			</tr>
 		</table>	
 	</div>
-		<p class="normalFont alignCenter"><br>
-			You have $<span id="playerMoney"></span> to spend.<br>
+		<p class="normalFont paragraphAlignCenter"><br>
+			You have $<span id="playerMoney"></span> to spend.<br><br>
 			Which number?
-			<input class="optionInput normalFont" id="optionsChoice"
+			<input class="optionInput normalFont textAlignCenter" id="optionsChoice"
 				type="text" name="quantity" min="1" max="8"
 				onblur="this.focus()" autofocus>
 
@@ -65,7 +65,7 @@
 
 		<p class="normalFont alignCenter" id="amountInput" style="display: none">
 			How many <span id="itemName"></span>?
-			<input class="optionInput normalFont" id="amount" type="text" onblur="this.focus()" autofocus>
+			<input class="optionInput normalFont textAlignCenter" id="amount" type="text" onblur="this.focus()" autofocus>
 		</p>
 
 		<br> <br>

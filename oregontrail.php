@@ -81,7 +81,7 @@
 		<br>
 	</div>
 
-	<div class="normalFont alignCenter">
+	<div class="normalFont paragraphAlignCenter">
 		<br>You may: <br>
 		<p class="optionsList">
 			1. Travel the trail <br>
@@ -90,7 +90,7 @@
 			<span id="sound">4. Turn sound off</span><br>
 		</p>
 			What is your choice?
-			<input class="optionInput normalFont" id="optionsChoice" type="text" name="quantity" min="1" max="4" onblur="this.focus()" autofocus>
+			<input class="optionInput normalFont textAlignCenter" id="optionsChoice" type="text" name="quantity" min="1" max="4" onblur="this.focus()" autofocus>
 	</div>
 
 	<div class="textAlignCenter">
