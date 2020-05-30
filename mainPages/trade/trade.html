@@ -1,9 +1,9 @@
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="../../proj2.css">
+	<link rel="stylesheet" type="text/css" href="../../oregontrail.css">
 </head>
 <body>
-	<div class="title">
+	<div class="normalFont textAlignCenter">
 		<h2>
             Your Supplies
 		</h2>
@@ -12,47 +12,48 @@
 	<div id="mainOptions">
 			<table id="storeTable">
 				<tr>
-					<th>oxen</th>
-					<th><span id="oxen"></span></th>
+					<td class="td-left">oxen</td>
+					<td><span id="oxen"></span></td>
 				</tr>
 				<tr>
-					<th>sets of clothing</th>
-					<th><span id="sets"></span></th>
+					<td class="td-left">sets of clothing</td>
+					<td><span id="sets"></span></td>
 				</tr>
 				<tr>
-					<th>fishing poles</th>
-					<th><span id="poles"></span></th>
+					<td class="td-left">bullets</td>
+					<td><span id="poles"></span></td>
 				</tr>
 				<tr>
-					<th>wagon wheels</th>
-					<th><span id="wheels"></span></th>
+					<td class="td-left">wagon wheels</td>
+					<td><span id="wheels"></span></td>
 				</tr>
 				<tr>
-					<th>wagon axles</th>
-					<th><span id="axles"></span></th>
+					<td class="td-left">wagon axles</td>
+					<td><span id="axles"></span></td>
 				</tr>
 				<tr>
-					<th>wagon tongues</th>
-					<th><span id="tongues"></span></th>
+					<td class="td-left">wagon tongues</td>
+					<td><span id="tongues"></span></td>
 				</tr>
 				<tr>
-					<th>pounds of food</th>
-					<th><span id="food"></span></th>
+					<td class="td-left">pounds of food</td>
+					<td><span id="food"></span></td>
 				</tr>
 			</table>
+		<div class="normalFont alignCenter">
 
 
-		<p id="trader" class="talk" style="display: none">You meet another emigrant who wants <span id="wants"></span>.</p>
+		<p id="trader" class="textAlignCenter" style="display: none">You meet another emigrant who wants <span id="wants"></span>.</p>
 
-		<p id="cannotTrade" class="talk" style="display: none">You don't have this.<br>Press SPACE BAR to continue.</p>
+		<p id="cannotTrade" class="textAlignCenter" style="display: none">You don't have this.<br>Press SPACE BAR to continue.</p>
 
-		<p id="canTrade" class="talk" style="display: none">In return, they will give you <span id="gives"></span>.</p>
+		<p id="canTrade" class="textAlignCenter" style="display: none">In return, they will give you <span id="gives"></span>.</p>
 
-		<p id="willTrade" class="talk" style="display: none">
+		<p id="willTrade" class="textAlignCenter" style="display: none">
 		Are you willing to trade? <input id="inputTrade" class="optionInput normalFont" type="text" name="quantity" onblur="this.focus()" autofocus>
 		</p>
 
-		<p id="noTrader" class="talk" style="display: none">No one wants to trade with you today.<br>Press SPACE BAR to continue.</p>
+		<p id="noTrader" class="textAlignCenter" style="display: none">No one wants to trade with you today.<br><br>Press SPACE BAR to continue.</p>
 
     </div>
 
