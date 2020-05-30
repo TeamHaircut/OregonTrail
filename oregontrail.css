@@ -65,10 +65,11 @@ tr, th, .textAlignCenter, .title{
 }
 
 .optionInput {
-	width: 10%;
+	width: 30%;
+	margin-bottom: 2%;
 	background-color: black;
 	color: white;
-	border: none;
+	border: solid;
 }
 
 img {
