@@ -13,10 +13,10 @@ $(document).ready(function(){
                     break;
                 case 3:
                     paragraphHead.text("Hello, I'm Matt.  So you're going to Oregon!  I can fix you up with what you need: ");
-                    paragraph.html("- a team of oxen to pull your wagon<br>- clothing for both summer and winter");
+                    paragraph.html("<br>- a team of oxen to pull your wagon<br><br>- clothing for both summer and winter");
                     break;
                 case 4:
-                    paragraph.html("- plenty of food for the trip<br>- ammunition for your rifles<br>- spare parts for your wagon");
+                    paragraph.html("<br>- plenty of food for the trip<br><br>- ammunition for your rifles<br><br>- spare parts for your wagon");
                     break;
                 case 5:
 

@@ -15,14 +15,14 @@
 		<h2 id="dateLocation"></h2>
 	</div>
 
-	<div class="status normalFont negativeColor boxed">
+	<div class="status normalFont negativeColor paragraphAlignCenter">
 		Weather: <span id="weather"></span> <br>
 		Health: <span id="health"></span> <br>
 		Pace: <span id="pace"></span> <br>
 		Rations: <span id="rations"></span> <br>
 	</div><br>
 
-	<div class="normalFont alignCenter">
+	<div class="normalFont paragraphAlignCenter">
 		You may: <br>
 		<p class="optionsList">
 			1. Continue on trail <br>
@@ -36,12 +36,12 @@
 			<span id="onTrail" style="display: none">8. Attempt to hunt for food <br> </span>
 			<span id="canShop" style="display: none">9. Buy supplies <br> </span>
 			<br>
+		</p>
 
-			What is your choice?
-			<input class="optionInput normalFont" id="optionsChoice"
+		What is your choice?
+		<input class="optionInput normalFont textAlignCenter" id="optionsChoice"
 				type="text" name="mainVal" min="1" max="9"
 				onblur="this.focus()" autofocus>
-		</p>
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>

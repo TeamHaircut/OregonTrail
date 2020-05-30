@@ -58,9 +58,9 @@
 
 	<br>
 
-	<div class="bordered normalFont">
+	<div class="normalFont paragraphAlignCenter" style="border: solid; padding:0.5em">
 		Would you like to see how points are earned?
-		<input class="optionInput normalFont" id="inputPointsEarned" type="text"
+		<input class="optionInput normalFont textAlignCenter" id="inputPointsEarned" type="text"
 		onkeypress="checkEnteredValue(event)" onblur="this.focus()" autofocus></input>
 	</div>
 
