@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="../../oregontrail.css">
@@ -39,23 +40,22 @@
 					<td class="td-left">pounds of food</td>
 					<td><span id="food"></span></td>
 				</tr>
-			</table>
-		<div class="normalFont alignCenter">
+			</table><br>
+		<div class="normalFont paragraphAlignCenter">
 
+		<p id="trader" style="display: none">You meet another emigrant who wants <span id="wants"></span>.</p>
 
-		<p id="trader" class="textAlignCenter" style="display: none">You meet another emigrant who wants <span id="wants"></span>.</p>
+		<p class="textAlignCenter" id="cannotTrade" style="display: none"><br>You don't have this.<br>Press SPACE BAR to continue.</p>
 
-		<p id="cannotTrade" class="textAlignCenter" style="display: none">You don't have this.<br>Press SPACE BAR to continue.</p>
+		<p id="canTrade" style="display: none">In return, they will give you <span id="gives"></span>.</p>
 
-		<p id="canTrade" class="textAlignCenter" style="display: none">In return, they will give you <span id="gives"></span>.</p>
-
-		<p id="willTrade" class="textAlignCenter" style="display: none">
+		<p id="willTrade" style="display: none">
 		Are you willing to trade? <input id="inputTrade" class="optionInput normalFont" type="text" name="quantity" onblur="this.focus()" autofocus>
 		</p>
 
-		<p id="noTrader" class="textAlignCenter" style="display: none">No one wants to trade with you today.<br><br>Press SPACE BAR to continue.</p>
+		<p class="textAlignCenter" id="noTrader" style="display: none"><br>No one wants to trade with you today.<br><br>Press SPACE BAR to continue.</p>
 
-    </div>
+    	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="../common.js" type="text/javascript"></script>
