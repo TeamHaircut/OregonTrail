@@ -1,55 +1,86 @@
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="../../proj2.css">
+	<link rel="stylesheet" type="text/css" href="../../oregontrail.css">
 </head>
 <body>
-	<div class="title">
+	<div class="normalFont negativeColor textAlignCenter boxed">
 		<h2 id="dateLocation"></h2>
 	</div>
 
 	<div id="prices" class="buy"></div>
-	<div class="options">
-		<p class="optionsList">
-
-			1. Oxen ............. <span id="oxPrice"></span> per ox<br>
-			2. Clothing ......... <span id="clothingPrice"></span> per set<br>
-			3. Fishing poles ....  <span id="polePrice"></span> per pole<br>
-			4. Wagon wheels .....  <span id="wheelPrice"></span> per wheel<br>
-			5. Wagon axles ......  <span id="axlePrice"></span> per axle<br>
-			6. Wagon tongues ....  <span id="tonguePrice"></span> per tongue<br>
-			7. Food .............  <span id="foodPrice"></span> per pound<br>
-			8. Leave Store <br>
-			<br>
+	<div class="normalFont alignCenter"></div>
+	<div>
+		<table>
+			<tr>
+				<td class="td-left">1. Oxen</td>
+				<td></td><td></td>
+				<td class="td-left"><span id="oxPrice"></span> per ox</td>
+			</tr>
+			<tr>
+				<td class="td-left">2. Clothing</td>
+				<td></td><td></td>
+				<td class="td-left"><span id="clothingPrice"></span> per set</td>
+			</tr>
+			<tr>
+				<td class="td-left">3. Amunition</td>
+				<td></td><td></td>
+				<td class="td-left"><span id="polePrice"></span> per box</td>
+			</tr>
+			<tr>
+				<td class="td-left">4. Wagon wheel</td>
+				<td></td><td></td>
+				<td class="td-left"><span id="wheelPrice"></span> per wheel</td>
+			</tr>
+			<tr>
+				<td class="td-left">5. Wagon axles</td>
+				<td></td><td></td>
+				<td class="td-left"><span id="axlePrice"></span> per axle</td>
+			</tr>
+			<tr>
+				<td class="td-left">6. Wagon tongue</td>
+				<td></td><td></td>
+				<td class="td-left"><span id="tonguePrice"></span> per tongue</td>
+			</tr>
+			<tr>
+				<td class="td-left">7. Food</td>
+				<td></td><td></td>
+				<td class="td-left"><span id="foodPrice"></span> per pound</td>
+			</tr>
+			<tr>
+				<td class="td-left">8. Leave store</td>
+				<td></td><td></td>
+				<td class="td-left"></td>
+			</tr>
+		</table>	
+	</div>
+		<p class="normalFont alignCenter"><br>
 			You have $<span id="playerMoney"></span> to spend.<br>
 			Which number?
-			<input class="optionInput" id="optionsChoice"
+			<input class="optionInput normalFont" id="optionsChoice"
 				type="text" name="quantity" min="1" max="8"
 				onblur="this.focus()" autofocus>
 
 		</p>
-
 		<br> <br>
 
-		<p id="amountInput" style="display: none">
+		<p class="normalFont alignCenter" id="amountInput" style="display: none">
 			How many <span id="itemName"></span>?
-			<input class="optionInput" id="amount" type="text" onblur="this.focus()" autofocus>
+			<input class="optionInput normalFont" id="amount" type="text" onblur="this.focus()" autofocus>
 		</p>
 
 		<br> <br>
 
-		<p id="carryError" style="display: none">
+		<p class="normalFont alignCenter" id="carryError" style="display: none">
 			You can only carry <span id="limit"></span> <span id="carryItem"></span>.
 			<br>
 			Press SPACE BAR to continue.
 		</p>
 
-		<p id="costError" style="display: none">
+		<p class="normalFont alignCenter" id="costError" style="display: none">
 			You cannot afford that.
 			<br>
 			Press SPACE BAR to continue.
 		</p>
-
-	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="../../landmarkInfo.js" type="text/javascript"></script>
