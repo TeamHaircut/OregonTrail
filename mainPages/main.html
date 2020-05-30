@@ -1,29 +1,28 @@
-<!-- Name: Kush Patel
+<!-- Name: TeamHaircut
 	 File: main.html
-	 Date Created: 4/15/17
-	 Description: Main page, converted from php to html (MOD by: David Leiberg)
-	 URL: https://swe.umbc.edu/~pak2/OregonTrail/main.php
+	 Date Created: 5/28/20
+	 Description: Main page, converted from php to html
 -->
 
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="../proj2.css">
+	<link rel="stylesheet" type="text/css" href="../oregontrail.css">
 </head>
 
 <body onkeypress="directInput()">
 
-	<div class="title textAlignCenter">
+	<div class="normalFont textAlignCenter">
 		<h2 id="dateLocation"></h2>
 	</div>
 
-	<div class="status normalFont">
+	<div class="status normalFont negativeColor boxed">
 		Weather: <span id="weather"></span> <br>
 		Health: <span id="health"></span> <br>
 		Pace: <span id="pace"></span> <br>
 		Rations: <span id="rations"></span> <br>
-	</div>
+	</div><br>
 
-	<div class="options normalFont">
+	<div class="normalFont alignCenter">
 		You may: <br>
 		<p class="optionsList">
 			1. Continue on trail <br>
@@ -34,9 +33,9 @@
 			6. Stop to rest <br>
 			7. Attempt to trade <br>
 			<span id="atLandmark" style="display: none">8. Talk to people <br> </span>
-			<span id="onTrail" style="display: none">8. Attempt to fish for food <br> </span>
+			<span id="onTrail" style="display: none">8. Attempt to hunt for food <br> </span>
 			<span id="canShop" style="display: none">9. Buy supplies <br> </span>
-			<br><br><br>
+			<br>
 
 			What is your choice?
 			<input class="optionInput normalFont" id="optionsChoice"
