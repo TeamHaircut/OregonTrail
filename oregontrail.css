@@ -116,13 +116,9 @@ h1 {
 }
 
 .status{
-	background-color: white;
-	color: black;
-	border: none;
-	margin-right: 32em;
-	margin-left: 32em;
-	margin-bottom: .5em;
-	padding-left: .5em;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 0.5em;
 }
 
 .rest{
