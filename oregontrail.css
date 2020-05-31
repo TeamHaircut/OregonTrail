@@ -61,7 +61,14 @@ tr, th, .textAlignCenter, .title{
 .paragraphAlignCenter{
 	margin: auto;
 	width: 30em;
-} 
+}
+
+.trailParagraphAlignCenter{
+	margin: auto;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	width: 55em;
+}  
 
 .learnTrailParagraph{
 	margin-left: 10em;
@@ -196,10 +203,10 @@ h1 {
 }
 
 .trailCanvas{
-  position: relative;
-  width: 900px;
-  height: 300px;
-  margin-left: 300px;
+  /*position: relative;*/
+  width: 55.5em;
+  height: 18em;
+  /*margin-left: 0px;*/
   background-image: url("mainPages/trail/images/trail.jpg");
 
 }
