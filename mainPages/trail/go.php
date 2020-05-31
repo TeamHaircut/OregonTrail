@@ -3,16 +3,16 @@
 ?>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="../../proj2.css">
+	<link rel="stylesheet" type="text/css" href="../../oregontrail.css">
 </head>
 
 <body onload="go(); animateCross();">
-	<div class="rest normalFont" id="info">
+	<div class="normalFont trailParagraphAlignCenter textAlignCenter" id="info">
 		<span id="random" style="display: none"></span>
 	</div>
-	<div class="title" id="space">Press RETURN to size up the situation</div>
-	<div class="trailCanvas">
+	<div class="normalFont trailParagraphAlignCenter textAlignCenter" id="space">Press RETURN to size up the situation</div>
 
+	<div class="trailCanvas alignCenter">
   		<div id="wheelCanvas">
   			<div id="wagon"></div>
     			<div class="front">
@@ -23,7 +23,8 @@
     			</div>
   		</div>
 	</div>
-	<div class="normalFont status">
+
+	<div class="status normalFont negativeColor trailParagraphAlignCenter textAlignCenter">
 		Date: <span id="dateLocation"></span> <br>
 		Weather: <span id="weather"></span> <br>
 		Health: <span id="health"></span> <br>
