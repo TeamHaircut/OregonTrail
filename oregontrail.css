@@ -168,9 +168,9 @@ h1 {
 
 #wagon {
   position: absolute;
-  width: 150px;
-  height: 150px;
-  margin-left: 170px;
+  width: 238px;
+  height: 87px;
+  margin-left: 130px;
   margin-top: 30px;
   background-image: url("mainPages/trail/images/ford.png");
 }
@@ -184,8 +184,8 @@ h1 {
 
 #ford {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 238px;
+  height: 87px;
   margin-left: 350px;
   margin-top: 350px;
   background-image: url("mainPages/trail/images/ford.png");
@@ -214,18 +214,18 @@ h1 {
 .front {
   position: absolute;
   border-radius: 50%;
-  width: 23px;
-  height: 23px;
-  left: 210px;
-  top: 135px;
+  width: 38px;
+  height: 38px;
+  left: 254px;
+  top: 85px;
 }
 .back {
   position: absolute;
   border-radius: 50%;
-  width: 23px;
-  height: 23px;
-  left: 262px;
-  top: 135px;
+  width: 38px;
+  height: 38px;
+  left: 318px;
+  top: 85px;
 }
 
 .moveWheel{
