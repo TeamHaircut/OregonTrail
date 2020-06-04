@@ -43,7 +43,7 @@ $(document).ready(function(){
 
 		else if(e.keyCode == enterKey){ // only when counter > 4
 			var userResponse = $('#input').val(); // Are the names correct
-			if(userResponse == "y" || userResponse == "yes"){
+			if(userResponse == "y" || userResponse == "yes" || userResponse == "Y" || userResponse == "YES"){
 				// save party variables in JS session storage game variable
 				for (var i = 0; i < 5; i++){
 					game.party.push(names[i]); // push all of the names
@@ -55,7 +55,7 @@ $(document).ready(function(){
 				location.replace("../pickMonth/pickMonth.html");
 			}
 
-			else if(userResponse == "n" || userResponse == "no"){
+			else if(userResponse == "n" || userResponse == "no" || userResponse == "N" || userResponse == "NO"){
 				$('#text').html('<br>Which party member do you want to change the name of? (number)');
 				$('#input').val("");
 				isChoosingNumber = true;
