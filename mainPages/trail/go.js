@@ -210,6 +210,18 @@ $(document).ready(function() {
 	$("#rivWidth").text(game.riverWidth);
 	$("#rivDepth").text(game.riverDepth);
 
+	$("#barButton2").click(function() {
+    		game.inTown = false;
+    		window.sessionStorage.game = JSON.stringify(game);
+    		location.replace("go.php");
+	});
+
+	$("#returnButton2").click(function() {
+    		game.inTown = false;
+    		window.sessionStorage.game = JSON.stringify(game);
+                location.replace("../main.html");
+	});
+
     	$(document).keydown(function(e) {
     		if(e.keyCode == spacebarKey){
     			game.inTown = false;

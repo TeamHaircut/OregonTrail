@@ -6,6 +6,10 @@ document.body.onkeyup = function(e){
         }
 }
 
+$("#barButton2").click(function() {
+	location.replace("../main.html");
+});
+
 var game = JSON.parse(window.sessionStorage.game);
 
 // individual points as found in the 900X500 pixel canvas

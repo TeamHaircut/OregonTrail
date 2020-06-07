@@ -191,5 +191,9 @@ $(document).ready(function() {
 			}
 		});
 
+		$("#barButton2").click(function() {
+			location.replace("../main.html");
+		});
+
 	}
 });

@@ -31,6 +31,7 @@ $(document).ready(function(){
 
 	// Display a new page to the screen, using input string pageId
 	function displayPage(pageId) {
+	  //alert(pageId);
 	  var page = $(pageId);
 	  page.attr("style", "display: block");
 	}
@@ -56,6 +57,7 @@ $(document).ready(function(){
 	// Input: ID of the page to display, input tag ID, and what you want to the currentPage to
 	// Output: remove the main options page, focus on the given input, set currentPage
 	function displayNewPage(pageToDisplay, input, currPage) {
+		//alert(pageToDisplay);
 		removePage("#mainOptions");
 		displayPage(pageToDisplay);
 		focusOnInput(input);
@@ -99,6 +101,9 @@ $(document).ready(function(){
 			displayHome(pageToRemove);
 		}
 	}
+    
+//
+//
 
     $(document).keydown(function(e){
         if(e.keyCode == spacebarKey){
@@ -136,6 +141,7 @@ $(document).ready(function(){
         		displayHome("#errorPage");
         	}
         	else if(currentPage == "afterPage"){
+			//alert("180,36");
         		location.replace("../../mainPages/trail/landmark.html");
         	}
 
@@ -203,6 +209,53 @@ $(document).ready(function(){
 		} // end enterKey else if
 
     }); // end keydown
+
+    $("#barButton2").click(function() {
+	     location.replace("../../mainPages/trail/landmark.html");
+});
+
+    $("#barButton").click(function() {
+	//alert("104,Col24");
+	if(currentPage == "mainPage" && checkHasOxen()){
+			if (totalBill > game.money){
+
+	        		displayNewPage("#errorPage", null, "errorPage");
+	        	}
+	        	else {
+				//alert("110,43");
+	        		game.money -= totalBill;
+	        		game.oxen = numOxen * 2; // 2 oxen = 1 yoke
+					game.food = numFood;
+					game.sets = numClothing;
+					game.poles = numPoles;
+					game.wheels = numWheels;
+					game.axles = numAxles;
+					game.tongues = numTongues;
+
+					// setup remaining game variables before continuing
+					game.location = "Independence";
+					game.visited = [];
+					game.miles = 0;
+
+					game.weather = updateWeather(game.month);
+					game.water = waterStatus();
+					game.pace = "steady";
+					game.rations = "filling";
+					window.sessionStorage.game = JSON.stringify(game);
+					//alert("130,52");
+					displayNewPage("#afterPage", null, "afterPage");
+				} // end else
+
+        	} // end inner if
+		/*TTT-0023 Dead Code*/
+        	else if(currentPage == "errorPage"){
+        		displayHome("#errorPage");
+        	}
+        	//else if(currentPage == "afterPage"){
+			//alert("139,35");
+        	//	location.replace("../../mainPages/trail/landmark.html");
+        	//}
+ });
 
 
   var currentPage = "mainPage"; // initially main options are displayed, keep track of the current page that the user is on

@@ -15,6 +15,9 @@ $(document).ready(function(){
 				location.replace("../main.html");
 			}
 		});
+		$("#barButton2").click(function() {
+			location.replace("../main.html");
+		});
 	} else {
 		$("#noPoles").css("display", "none");
 

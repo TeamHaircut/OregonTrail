@@ -10,8 +10,7 @@
 	<div class="normalFont trailParagraphAlignCenter textAlignCenter" id="info">
 		<span id="random" style="display: none"></span>
 	</div>
-	<div class="normalFont trailParagraphAlignCenter textAlignCenter" id="space">Press RETURN to size up the situation</div>
-
+	<div class="normalFont trailParagraphAlignCenter textAlignCenter" id="space">Press <button class="spaceButton" id="returnButton2" >RETURN</button> to size up the situation</div>
 	<div class="trailCanvas alignCenter">
   		<div id="wheelCanvas">
   			<div id="wagon"></div>
