@@ -203,19 +203,19 @@ h1 {
   position: absolute;
   width: 238px;
   height: 87px;
-  margin-left: 350px;
+  margin-left: 40%;
   margin-top: 350px;
   background-image: url("mainPages/trail/images/ford.png");
 }
 
 #riverCrossCanvas {
-  position: absolute;
+  /*position: absolute;*/
   border-width: 10px;
   border-style: solid;
   border-color: white;
   width: 1000px;
   height: 600px;
-  margin-left:250px;
+  /*margin-left: auto;*/
   background-image: url("mainPages/trail/images/crossing.png");
 }
 
