@@ -98,6 +98,23 @@ img {
 	margin-left: 32em;
 }
 
+.spaceButton{
+	font-family: "Here Lies MECC Regular";
+	border: none;
+	background: none;
+	color: white;
+	font-size: 115%;
+}
+
+.spaceButton:focus{
+	font-family: "Here Lies MECC Regular";
+	border: none;
+	background: none;
+	color: white;
+	outline: none;
+	box-shadow: none;
+}
+
 .title{
 	font-family: "IFC INSANE RODEO";
 	font-size: 400%;

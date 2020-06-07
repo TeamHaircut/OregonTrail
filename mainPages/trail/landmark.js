@@ -51,6 +51,18 @@ $(document).ready(function() {
         sound.play();
     }
 
+    $("#barButton2").click(function() {
+		    if (name == 'The Dalles'){
+            	location.replace("riverGameDesc.html");
+		    }
+            else if (name == "the Willamette Valley") {
+                // game completion, calculate points
+                location.replace("../points/points.php");
+            }
+		    else{
+            	location.replace("../main.html");
+		    }
+    });
 
     $(document).keydown(function(e) {
         if (e.keyCode == spacebarKey) {
