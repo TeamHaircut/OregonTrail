@@ -4,6 +4,10 @@ document.body.onkeyup = function(e){
         }
 }
 
+$("#barButton2").click(function() {
+	location.replace("../branch.html");
+});
+
 var game = JSON.parse(window.sessionStorage.game);
 
 var points = {
