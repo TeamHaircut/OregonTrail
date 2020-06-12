@@ -11,6 +11,19 @@ document.body.onkeyup = function(e){
     	}
 	else{}
 }
+
+function returnClick() {
+    	if(game.riverGame == 2){
+		location.replace("landmark.html");
+    	}
+    	else if(game.riverGame == 1){
+		location.replace("../main.html");
+    	}
+    	else{
+		location.replace("riverGame.html");
+    	}
+}
+
 var wagon;
 var debris = [];
 var board = {
