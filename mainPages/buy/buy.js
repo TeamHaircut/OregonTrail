@@ -150,6 +150,14 @@ $(document).ready(function () {
 								$(document).off("keydown");
 							}
 						});
+						$("#barButton").click(function() {
+								$("#carryError").css("display", "none");
+								// enable input and clear the text space
+								$("#optionsChoice").prop("disabled", false);
+								$("#optionsChoice").val("");
+								$("#optionsChoice").focus();
+								$(document).off("keydown");							
+						});
 
 					}
 				}
@@ -165,6 +173,14 @@ $(document).ready(function () {
 							$("#optionsChoice").focus();
 							$(document).off("keydown");
 						}
+					});
+					$("#barButton2").click(function() {
+							$("#costError").css("display", "none");
+							// enable input and clear the text space
+							$("#optionsChoice").prop("disabled", false);
+							$("#optionsChoice").val("");
+							$("#optionsChoice").focus();
+							$(document).off("keydown");							
 					});
 				}
 			}
