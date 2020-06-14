@@ -214,47 +214,49 @@ $(document).ready(function(){
 	     location.replace("../../mainPages/trail/landmark.html");
 });
 
+    $("#barButton3").click(function() {
+	if(currentPage == "errorPage"){
+		//alert("139,35");
+		displayHome("#errorPage");
+	}
+	else if(currentPage == "afterPage"){
+		//alert("139,35");
+		location.replace("../../mainPages/trail/landmark.html");
+	}
+});
+
     $("#barButton").click(function() {
 	//alert("104,Col24");
 	if(currentPage == "mainPage" && checkHasOxen()){
-			if (totalBill > game.money){
+		if (totalBill > game.money){
 
-	        		displayNewPage("#errorPage", null, "errorPage");
-	        	}
-	        	else {
-				//alert("110,43");
-	        		game.money -= totalBill;
-	        		game.oxen = numOxen * 2; // 2 oxen = 1 yoke
-					game.food = numFood;
-					game.sets = numClothing;
-					game.poles = numPoles;
-					game.wheels = numWheels;
-					game.axles = numAxles;
-					game.tongues = numTongues;
-
-					// setup remaining game variables before continuing
-					game.location = "Independence";
-					game.visited = [];
-					game.miles = 0;
-
-					game.weather = updateWeather(game.month);
-					game.water = waterStatus();
-					game.pace = "steady";
-					game.rations = "filling";
-					window.sessionStorage.game = JSON.stringify(game);
-					//alert("130,52");
-					displayNewPage("#afterPage", null, "afterPage");
-				} // end else
-
-        	} // end inner if
-		/*TTT-0023 Dead Code*/
-        	else if(currentPage == "errorPage"){
-        		displayHome("#errorPage");
+        		displayNewPage("#errorPage", null, "errorPage");
         	}
-        	//else if(currentPage == "afterPage"){
-			//alert("139,35");
-        	//	location.replace("../../mainPages/trail/landmark.html");
-        	//}
+        	else {
+			//alert("110,43");
+        		game.money -= totalBill;
+        		game.oxen = numOxen * 2; // 2 oxen = 1 yoke
+				game.food = numFood;
+				game.sets = numClothing;
+				game.poles = numPoles;
+				game.wheels = numWheels;
+				game.axles = numAxles;
+				game.tongues = numTongues;
+
+				// setup remaining game variables before continuing
+				game.location = "Independence";
+				game.visited = [];
+				game.miles = 0;
+
+				game.weather = updateWeather(game.month);
+				game.water = waterStatus();
+				game.pace = "steady";
+				game.rations = "filling";
+				window.sessionStorage.game = JSON.stringify(game);
+				//alert("130,52");
+				displayNewPage("#afterPage", null, "afterPage");
+		} // end else
+	} // end inner if
  });
 
 
