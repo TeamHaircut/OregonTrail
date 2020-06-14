@@ -80,6 +80,12 @@ $(document).ready(function () {
 				else {
 					$("#amountInput").css("display", "block");
 					$(this).prop("disabled", true);
+					if(items[itemSelect] == "food"){
+						$("#determiner").text("much");
+					}
+					else {
+						$("#determiner").text("many");
+					}
 					$("#itemName").text(items[itemSelect]);
 
 					// enable input and clear the text space
@@ -128,7 +134,12 @@ $(document).ready(function () {
 						// no space, display carry error
 						$("#carryError").css("display", "block");
 						$("#limit").text(limit);
-						$("#carryItme").text(itemStr);
+						if(itemStr == "food"){
+							$("#carryItem").text("pounds");
+						}
+						else {
+							$("#carryItem").text(itemStr);
+						}
 						$(document).keydown(function (e) {
 							if (e.keyCode == 32) {
 								$("#carryError").css("display", "none");
