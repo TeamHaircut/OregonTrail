@@ -67,6 +67,12 @@ $(document).ready(function(){
         } // end spacebarKey if
 	}); // end keydown
 
+	$("#barButton").click(function(){
+		if(currentPage == "explanationPage"){
+            		displayHome("#explanationPage");
+        	}
+	});
+
 	var currentPage = "mainPage";
 	var spacebarKey = 32, enterKey = 13;
 });
