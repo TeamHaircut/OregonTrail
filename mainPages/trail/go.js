@@ -34,13 +34,17 @@ function checkEvent() {
 		window.sessionStorage.game = JSON.stringify(game);
 		location.replace("branch/branch.html");
 	}
+	//DEAD CODE; obsolete by commit TTT=0028//
 	if(game.location == 'the Kansas River crossing' || game.location == 'the Big Blue River crossing' || game.location == 'the Green River crossing' || game.location == 'the Snake River crossing'){
+		//alert("38,27");
 		if (game.crossing == 1) {
+			//alert("40,35");
 			game.crossing = 0;
 			window.sessionStorage.game = JSON.stringify(game);
 			location.replace("crossing/crossing.html");
 		}
 	}
+	//DEAD CODE END//
 }
 
 function go() {
