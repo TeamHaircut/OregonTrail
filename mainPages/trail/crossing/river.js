@@ -123,3 +123,7 @@ document.body.onkeyup = function(e){
 		location.replace("crossing.html");
     	}
 }
+
+function barButton() {
+	location.replace("crossing.html");
+}
