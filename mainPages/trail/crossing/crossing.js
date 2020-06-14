@@ -8,17 +8,24 @@ $(document).ready(function(){
 
 	function getRiverDepth(game) {
 		if(game.weather == 'rainy' || game.weather == 'very rainy'){
-			game.riverDepth += Math.random() * .7;
+			game.riverDepth += Math.random() * 0.7;
 		}
 		else{
-			game.riverDepth -= Math.random() * .7;
+			game.riverDepth -= Math.random() * 0.7;
 		}
 
 		if(game.riverDepth < 1.5){
 			game.riverDepth = 1.5;
 		}
-		game.riverDepth = game.riverDepth.toFixed(1);
-
+		if(isNaN(game.riverDepth)){
+			var value = game.riverDepth;
+			var strEnd = "0."+value.substring(5,6);
+			game.riverDepth = parseFloat(game.riverDepth) + parseFloat(strEnd);
+		}
+		else{
+			game.riverDepth = game.riverDepth.toFixed(1);
+		}
+		
 	}
 
 	// get option set
