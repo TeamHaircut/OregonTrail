@@ -17,14 +17,16 @@ $(document).ready(function(){
 		if(game.riverDepth < 1.5){
 			game.riverDepth = 1.5;
 		}
+		//TTT-0014//
 		if(isNaN(game.riverDepth)){
-			var value = game.riverDepth;
-			var strEnd = "0."+value.substring(5,6);
-			game.riverDepth = parseFloat(game.riverDepth) + parseFloat(strEnd);
+			var currentValue = game.riverDepth;
+			var decimalPart = "0."+currentValue.substring(5,6);
+			game.riverDepth = parseFloat(game.riverDepth) + parseFloat(decimalPart);
 		}
 		else{
 			game.riverDepth = game.riverDepth.toFixed(1);
 		}
+		//TTT-0014 End//
 		
 	}
 
