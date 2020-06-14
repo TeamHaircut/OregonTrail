@@ -83,7 +83,7 @@ $(document).ready(function(){
 	$("#health").text(healthStatus(game.health));
 	$("#pace").text(game.pace);
 	$("#rations").text(game.rations);
-
+	
 	// get option set
 	$("#optionsChoice").keydown(function(e) {
 		if (e.keyCode == 13) {
@@ -92,7 +92,19 @@ $(document).ready(function(){
 			if(!isNaN(choice) && choice <= 9 && choice >= 1){
 				switch(choice) {
 					case 1:
-						location.replace("trail/trail.html");
+						if(game.location == "the Kansas River crossing" || game.location == "the Big Blue River crossing" || game.location == "the Green River crossing" || game.location == "the Snake River crossing") {
+							if(game.crossing == 1) {
+								game.crossing = 0;
+								window.sessionStorage.game = JSON.stringify(game);
+								location.replace("trail/crossing/crossing.html");
+							}
+							else {
+								location.replace("trail/trail.html");
+							}	
+						}
+						else {
+							location.replace("trail/trail.html");
+						}
 						break;
 					case 2:
 						location.replace("supplies/supplies.html");
