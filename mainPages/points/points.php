@@ -1,6 +1,6 @@
-<!-- Name: Dan Schomisch
+<!-- Name: TeamHaircut
 	 File: points.php
-	 Date Crerated: 5/15/2017
+	 Date Created: 6/14/2020
 	 Description: displays point total
 -->
 
@@ -8,10 +8,10 @@
 	session_start();
 
 	/* Determine if user had a high score */
-	$servername = "studentdb-maria.gl.umbc.edu";
-	$username = "dschom1";
-	$password = "dschom1";
-	$dbname = "dschom1";
+	$servername = "localhost";
+	$username = "root";
+	$password = "oregontrail";
+	$dbname = "oregontrail";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -56,12 +56,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="https://swe.umbc.edu/~fritzk1/OregonTrail/proj2.css">	
+	<link rel="stylesheet" type="text/css" href="../../oregontrail.css">	
 </head>
 
 <body>
 <div id="demo"></div>
-	<div class="status">
+	<div class="normalFont textAlignCenter">
 		<h2>Points for arriving in Oregon<br></h2>
 	</div>
 	<div>
@@ -108,7 +108,7 @@
 			</tr>
 			<tr>
 				<td id="pole"></td>
-				<td>poles</td>
+				<td>boxes of ammunition</td>
 				<td id="polePts"></td>
 			</tr>
 			<tr>
@@ -117,8 +117,8 @@
 				<td id="foodPts"></td>
 			</tr>
 			<tr>
-				<td> </td>
-				<td id="cash"></td>
+				<td id="cash"> </td>
+				<td>cash</td>
 				<td id="cashPts"></td>
 			</tr>
 			<tr>
@@ -131,8 +131,8 @@
 	
 	<br>
 
-	<p class="spaceToContinue textAlignCenter">
-			Press SPACE BAR to continue 
+	<p class="normalFont textAlignCenter">
+			Press <button class="spaceButton" onclick="barButton()" >SPACE BAR</button> to continue 
 	</p>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>

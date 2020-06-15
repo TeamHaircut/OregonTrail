@@ -9,10 +9,23 @@ document.body.onkeyup = function(e){
 			location.replace("insertHS.php"); // ... enter high score
 		}
 		else {
-			location.replace("../../proj2.php");
+			location.replace("../../oregontrail.php");
 		}
 
     }
+}
+
+function barButton() {
+	var r = /\d+/;
+	var s = window.sessionStorage.dbscore;
+	var q = s.match(r)[0];
+	if(q < total){
+		window.sessionStorage.dbscore = total;
+		location.replace("insertHS.php"); // ... enter high score
+	}
+	else {
+		location.replace("../../oregontrail.php");
+	}
 }
 
 var game = JSON.parse(window.sessionStorage.game);
@@ -81,7 +94,7 @@ document.getElementById('pole').innerHTML = game.poles;
 document.getElementById('polePts').innerHTML = game.poles*1;
 document.getElementById('food').innerHTML = game.food;
 document.getElementById('foodPts').innerHTML = Math.floor(game.food/25);
-document.getElementById('cash').innerHTML = '$'+game.money.toFixed(2)+ '.00 cash';
+document.getElementById('cash').innerHTML = '$'+game.money.toFixed(2)+ '';
 document.getElementById('cashPts').innerHTML = Math.floor(game.money.toFixed(2)/5);
 document.getElementById('totalPts').innerHTML = jobMulti*((goodPts)+(fairPts)+(poorPts)+(vpoorPts)+(game.oxen*4)+(part*2)+(game.sets*2)+(game.poles*1)+(Math.floor(game.food/25))+(Math.floor(game.money.toFixed(2)/5)));
 total = jobMulti*((goodPts)+(fairPts)+(poorPts)+(vpoorPts)+(game.oxen*4)+(part*2)+(game.sets*2)+(game.poles*1)+(Math.floor(game.food/25))+(Math.floor(game.money.toFixed(2)/5)));

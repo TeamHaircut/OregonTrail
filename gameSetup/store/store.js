@@ -244,7 +244,7 @@ $(document).ready(function(){
 				game.tongues = numTongues;
 
 				// setup remaining game variables before continuing
-				game.location = "Independence";
+				game.location = "Fort Walla Walla";
 				game.visited = [];
 				game.miles = 0;
 
