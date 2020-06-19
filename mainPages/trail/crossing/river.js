@@ -4,7 +4,8 @@ var game = JSON.parse(window.sessionStorage.game);
 //Coding Designs from W3Schools:
 //https://www.w3schools.com/howto/howto_js_animate.asp
 function animateCross() {
-  	var ford = document.getElementById("ford");
+  	var crossingImage = document.getElementById("crossingImage");
+
   	var start = 100;
  	var time = setInterval(frame, 15);
 
@@ -17,8 +18,17 @@ function animateCross() {
     		}
     		else {
      			start--;
-      			ford.style.top = start + 'px';
-      			ford.style.left = start + 'px';
+      				crossingImage.style.top = start + 'px';
+      				crossingImage.style.left = start + 'px';				
+			if(game.riverChoice == 1) {
+				crossingImage.style.backgroundImage = "url('../images/ford.png')";
+			}
+			else if(game.riverChoice == 2) {
+				crossingImage.style.backgroundImage = "url('../images/caulk.png')";			
+			}
+			else if(game.riverChoice == 3) {
+				crossingImage.style.backgroundImage = "url('../images/ferry.png')";			
+			}
     		}
   	}
 }

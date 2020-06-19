@@ -59,7 +59,7 @@ var board = {
 //Coding Designs from W3Schools:
 //https://www.w3schools.com/graphics/game_intro.asp
 function start() {
-    wagon = new sprite(30, 30, "images/ford.png", 500, 150);
+    wagon = new sprite(30, 30, "images/ferry.png", 500, 150);
     board.start();
 }
 
