@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="https://swe.umbc.edu/~fritzk1/OregonTrail/proj2.css"> 
+	<link rel="stylesheet" type="text/css" href="../../oregontrail.css"> 
 </head>
 
 <body>
 	<?php
-	$servername = "studentdb-maria.gl.umbc.edu";
-	$username = "dschom1";
-	$password = "dschom1";
-	$dbname = "dschom1";
+	$servername = "localhost";
+	$username = "root";
+	$password = "oregontrail";
+	$dbname = "oregontrail";
 	
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -33,7 +33,7 @@
 	<script src="https://swe.umbc.edu/~fritzk1/OregonTrail/changeSound.js" type="text/javascript"></script>
 	<script>
 
-		location.replace("../../proj2.php");
+		location.replace("../../oregontrail.php");
 
 
 	</script>
