@@ -208,6 +208,14 @@ h1 {
   background-image: url("mainPages/trail/images/ford.png");
 }
 
+#crossingImage {
+  position: absolute;
+  width: 238px;
+  height: 87px;
+  margin-left: 40%;
+  margin-top: 350px;
+}
+
 #riverCrossCanvas {
   /*position: absolute;*/
   border-width: 10px;
