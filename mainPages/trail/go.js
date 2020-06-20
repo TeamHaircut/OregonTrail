@@ -1,27 +1,6 @@
 var game = JSON.parse(window.sessionStorage.game);
 var spacebarKey = 32, enterKey = 13;
 
-//function animateCross()
-//Coding Designs from W3Schools:
-//https://www.w3schools.com/howto/howto_js_animate.asp
-function animateCross() {
-  	var wheel = document.getElementById("wheelCanvas");
-
-  	var start = 300;
-    var time = setInterval(frame, 15);
-
- 	function frame() {
-    		if (start == -300) {
-      			clearInterval(time);
-    		}
-    		else {
-     			start--;
-      			wheel.style.left = start + 'px';
-
-    		}
-  	}
-}
-
 function checkEvent() {
 
 	if (game.location == "South Pass" && game.branch == 1){
@@ -48,7 +27,83 @@ function checkEvent() {
 }
 
 function go() {
+  var initialDistance;
+  var start;
+  var difference;
+  var scaleFactor;
+  var objectContainer = document.getElementById("object");
+  var landmarkObject = document.getElementById("object1");
   var name = game.location;
+  //alert(name);
+   	if (name == 'Independence') {
+		initialDistance = 102;scaleFactor = 5.4;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+   	if (name == 'the Kansas River crossing') {
+    		initialDistance = 82;scaleFactor = 6.7;
+		landmarkObject.style.backgroundImage = "url('images/object.png')"; 
+    	}
+    	if (name == 'the Big Blue River crossing') {
+    		initialDistance = 118;scaleFactor = 4.6;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Fort Kearney') {
+    		initialDistance = 250;scaleFactor = 2.2;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Chimney Rock') {
+    		initialDistance = 86;scaleFactor = 6.4;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Fort Laramie') {
+    		initialDistance = 190;scaleFactor = 2.9;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Independence Rock') {
+    		initialDistance = 102;scaleFactor = 5.4;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'South Pass') {
+    		initialDistance = 57;scaleFactor = 9.6;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Fort Bridger') {
+    		initialDistance = 162;scaleFactor = 3.4;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'the Green River crossing') {
+    		initialDistance = 143;scaleFactor = 3.8;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Soda Springs') {
+    		initialDistance = 57;scaleFactor = 9.6;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Fort Hall') {
+    		initialDistance = 182;scaleFactor = 3.0;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'the Snake River crossing') {
+    		initialDistance = 113;scaleFactor = 4.8;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Fort Boise') {
+    		initialDistance = 160;scaleFactor = 3.4;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'the Blue Mountains') {
+		initialDistance = 55;scaleFactor = 10;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+	if (name == 'Fort Walla Walla') {
+		initialDistance = 120;scaleFactor = 4.6;
+		landmarkObject.style.backgroundImage = "url('images/object.png')";
+    	}
+
+  difference = initialDistance-game.toGo;
+  start = (scaleFactor)*(difference);
+  objectContainer.style.left = start + 'px';
+
   calcDays(1, game);
   calcMiles(game);
   game.weather = updateWeather(game.month);

@@ -6,10 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="../../oregontrail.css">
 </head>
 
-<body onload="go(); animateCross();">
+<body onload="go();">
 
 	<div class="trailCanvas alignCenter">
-  		<div id="wheelCanvas">
+  		<div id="object">
+  			<div id="object1"></div>
+  		</div>
+  		<div id="wheelCanvas" style="margin-left:500px">
   			<div id="wagon"></div>
     			<div class="front">
       				<div class="moveWheel"></div>
