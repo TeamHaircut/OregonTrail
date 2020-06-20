@@ -4,22 +4,27 @@ var spacebarKey = 32, enterKey = 13;
 //function animateCross()
 //Coding Designs from W3Schools:
 //https://www.w3schools.com/howto/howto_js_animate.asp
-function animateCross() {
-  	var wheel = document.getElementById("wheelCanvas");
 
-  	var start = 300;
+function animateObject() {
+/*	if(
+	var initalToGo = game.miles;
+	var currentToGo = game.toGo;
+  	var wheel = document.getElementById("object");
+	if(game.toGo > 0){
+  		var start = (500/game.toGo);
+		wheel.style.left = start + 'px';
+	}
     var time = setInterval(frame, 15);
 
  	function frame() {
-    		if (start == -300) {
+    		if (start == 300) {
       			clearInterval(time);
     		}
     		else {
-     			start--;
+     			start++;
       			wheel.style.left = start + 'px';
-
     		}
-  	}
+  	}*/
 }
 
 function checkEvent() {
@@ -48,7 +53,83 @@ function checkEvent() {
 }
 
 function go() {
+  var initialDistance;
+  var start;
+  var temp;
+  var temp1;
+  var wheel = document.getElementById("object");
+  var wheel1 = document.getElementById("object1");
   var name = game.location;
+  //alert(name);
+   	if (name == 'Independence') {
+		initialDistance = 102;temp1 = 5.4;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+   	if (name == 'the Kansas River crossing') {
+    		initialDistance = 82;temp1 = 6.7;
+		wheel1.style.backgroundImage = "url('images/object.png')"; 
+    	}
+    	if (name == 'the Big Blue River crossing') {
+    		initialDistance = 118;temp1 = 4.6;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Fort Kearney') {
+    		initialDistance = 250;temp1 = 2.2;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Chimney Rock') {
+    		initialDistance = 86;temp1 = 6.4;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Fort Laramie') {
+    		initialDistance = 190;temp1 = 2.9;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Independence Rock') {
+    		initialDistance = 102;temp1 = 5.4;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'South Pass') {
+    		initialDistance = 57; temp1 = 9.6;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Fort Bridger') {
+    		initialDistance = 162;temp1 = 3.4;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'the Green River crossing') {
+    		initialDistance = 143;temp1 = 3.8;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Soda Springs') {
+    		initialDistance = 57;temp1 = 9.6;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Fort Hall') {
+    		initialDistance = 182;temp1 = 3.0;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'the Snake River crossing') {
+    		initialDistance = 113;temp1 = 4.8;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'Fort Boise') {
+    		initialDistance = 160;temp1 = 3.4;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+    	if (name == 'the Blue Mountains') {
+		initialDistance = 55; temp1 = 10;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+	if (name == 'Fort Walla Walla') {
+		initialDistance = 120; temp1 = 4.6;
+		wheel1.style.backgroundImage = "url('images/object.png')";
+    	}
+
+  temp = initialDistance-game.toGo;
+  start = (temp1)*(temp);
+  wheel.style.left = start + 'px';
+
   calcDays(1, game);
   calcMiles(game);
   game.weather = updateWeather(game.month);
