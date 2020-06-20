@@ -275,7 +275,7 @@ h1 {
   height: 100%;
   border-radius: 50%;
   animation-iteration-count: infinite;
-  background-image: url("mainPages/trail/images/wheel.png");
+  /*background-image: url("mainPages/trail/images/wheel.png");*/
 
 }
 
