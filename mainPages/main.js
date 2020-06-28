@@ -102,6 +102,16 @@ $(document).ready(function(){
 								location.replace("trail/trail.html");
 							}	
 						}
+						else if(game.location == "South Pass" || game.location == "the Blue Mountains") {
+							if(game.branch == 1) {
+								game.branch = 0;
+								window.sessionStorage.game = JSON.stringify(game);
+								location.replace("trail/branch/branch.html");
+							}
+							else {
+								location.replace("trail/trail.html");
+							}
+						}
 						else {
 							location.replace("trail/trail.html");
 						}
