@@ -13,7 +13,7 @@
   			<div id="object1"></div>
   		</div>
   		<div id="wheelCanvas" style="margin-left:500px">
-  			<div id="wagon"></div>
+  			<div id="animation"></div>
     			<div class="front">
       				<div class="moveWheel"></div>
     			</div>
