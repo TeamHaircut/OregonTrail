@@ -34,7 +34,7 @@ function go() {
   var objectContainer = document.getElementById("object");
   var landmarkObject = document.getElementById("object1");
   var name = game.location;
-  //alert(name);
+  //alert(game.next);
    	if (name == 'Independence') {
 		initialDistance = 102;scaleFactor = 5.4;
 		landmarkObject.style.backgroundImage = "url('images/river.png')";
@@ -64,13 +64,22 @@ function go() {
 		landmarkObject.style.backgroundImage = "url('images/landmark.png')";
     	}
     	if (name == 'South Pass') {
-		//TODO fix image for branch
+		//TTT-0040
     		initialDistance = 57;scaleFactor = 9.6;
-		landmarkObject.style.backgroundImage = "url('images/fort.png')";
+		if(game.next == 'Fort Bridger') {
+			landmarkObject.style.backgroundImage = "url('images/fort.png')";
+		}
+		else if(game.next == 'the Green River crossing') {
+			landmarkObject.style.backgroundImage = "url('images/river.png')";
+		}
+		else {
+			landmarkObject.style.backgroundImage = "url('images/river.png')";
+		}
+		//TTT-0040 end
     	}
     	if (name == 'Fort Bridger') {
     		initialDistance = 162;scaleFactor = 3.4;
-		landmarkObject.style.backgroundImage = "url('images/river.png')";
+		landmarkObject.style.backgroundImage = "url('images/landmark.png')";
     	}
     	if (name == 'the Green River crossing') {
     		initialDistance = 143;scaleFactor = 3.8;
@@ -93,13 +102,22 @@ function go() {
 		landmarkObject.style.backgroundImage = "url('images/landmark.png')";
     	}
     	if (name == 'the Blue Mountains') {
-		//TODO fix image for branch
 		initialDistance = 55;scaleFactor = 10;
-		landmarkObject.style.backgroundImage = "url('images/fort.png')";
+		//TTT-0040
+		if(game.next == 'Fort Walla Walla') {
+			landmarkObject.style.backgroundImage = "url('images/fort.png')";
+		}
+		else if(game.next == 'The Dalles') {
+			landmarkObject.style.backgroundImage = "url('images/river.png')";
+		}
+		else {
+			landmarkObject.style.backgroundImage = "url('images/river.png')";
+		}
+		//TTT-0040 end
     	}
 	if (name == 'Fort Walla Walla') {
 		initialDistance = 120;scaleFactor = 4.6;
-		landmarkObject.style.backgroundImage = "url('images/landmark.png')";
+		landmarkObject.style.backgroundImage = "url('images/river.png')";
     	}
 
   difference = initialDistance-game.toGo;
@@ -234,6 +252,8 @@ function go() {
     		}
     		else {
     			game.location = "The Dalles";
+			game.next = "the Willamette Valley";
+			game.riverGame = 0;
     		}
     	}
     	if (name == 'Fort Walla Walla') {
