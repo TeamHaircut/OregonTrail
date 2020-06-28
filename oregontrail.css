@@ -182,7 +182,7 @@ h1 {
     margin-bottom: 5em;
     margin-left: 24em;
 }
-
+/*
 #wagon {
   position: absolute;
   width: 238px;
@@ -191,10 +191,36 @@ h1 {
   margin-top: 30px;
   background-image: url("mainPages/trail/images/ford.png");
 }
+*/
+#animation {
+  position: absolute;
+  width: 238px;
+  height: 87px;
+  margin-left: 130px;
+  margin-top: 30px;
+  background: url("mainPages/trail/images/wagon.png") left center;
+  background-size: cover;
+  animation: play 0.5s steps(3) infinite;
+  display: inline-block;
+}
+
+@keyframes play {
+  100% {background-position: 714px; }
+}
+
+
+#stoppedWagon {
+  position: absolute;
+  width: 238px;
+  height: 87px;
+  margin-left: 130px;
+  margin-top: 30px;
+  background-image: url("mainPages/trail/images/wagon1.png");
+}
 
 #object1 {
   position: absolute;
-  width: 100px;
+  width: 200px;
   height: 87px;
   /*margin-left: 130px;*/
   margin-top: 30px;
