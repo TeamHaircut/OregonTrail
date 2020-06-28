@@ -380,6 +380,7 @@ function robbed(game) {
 	var clothingCount = game.sets;
 	var poleCount = game.poles;
 	var oxenCount = game.oxen;
+	var displayProperty = "block";
 	var rand = Math.random();
 	if(rand > 0.90) {
 		var intro = "A thief comes during the <br> night and steals ";
@@ -388,40 +389,52 @@ function robbed(game) {
 		var rand2 = Math.floor((Math.random()*4) + 1);
 		switch (rand2) {
 				case 1:
-					amount = Math.floor((Math.random()*foodCount) + 1);
-					outcome = " pounds of food.";
-					game.food-=amount;
-					if (game.food < 0){
-						game.food = 0;
+					if(foodCount <= 0) {displayProperty = "none";}
+					else {
+						amount = Math.floor((Math.random()*foodCount) + 1);
+						outcome = " pounds of food.";
+						game.food-=amount;
+						if (game.food < 0){
+							game.food = 0;
+						}
 					}
 					break;
 				case 2:
-					amount = Math.floor((Math.random()*clothingCount) + 1);
-					outcome = " sets of clothing.";
-					game.sets-=amount;
-					if (game.sets < 0){
-						game.sets = 0;
+					if(clothingCount <= 0) {displayProperty = "none";}
+					else {
+						amount = Math.floor((Math.random()*clothingCount) + 1);
+						outcome = " sets of clothing.";
+						game.sets-=amount;
+						if (game.sets < 0){
+							game.sets = 0;
+						}
 					}
 					break;
 				case 3:
-					amount = Math.floor((Math.random()*poleCount) + 1);
-					outcome = " poles.";
-					game.poles-=amount;
-					if (game.poles < 0){
-						game.poles = 0;
+					if(poleCount <= 0) {displayProperty = "none";}
+					else {
+						amount = Math.floor((Math.random()*poleCount) + 1);
+						outcome = " boxes of bullets.";
+						game.poles-=amount;
+						if (game.poles < 0){
+							game.poles = 0;
+						}
 					}
 					break;
 				case 4:
-					amount = Math.floor((Math.random()*oxenCount) + 1);
-					outcome = " oxen.";
-					game.oxen-=amount;
-					if (game.oxen < 0){
-						game.oxen = 0;
+					if(oxenCount <= 0) {displayProperty = "none";}
+						else {
+						amount = Math.floor((Math.random()*oxenCount) + 1);
+						outcome = " oxen.";
+						game.oxen-=amount;
+						if (game.oxen < 0){
+							game.oxen = 0;
+						}
 					}
 					break;
 				default:
 			}
-  		document.getElementById("random").style.display="block";
+  		document.getElementById("random").style.display=displayProperty;
 		document.getElementById("random").innerHTML = intro +amount +outcome;
 	}
 
