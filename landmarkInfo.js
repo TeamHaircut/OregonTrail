@@ -1,8 +1,3 @@
-// Author: David Leiberg
-// Temporary file containing info on landmarks from trail;
-//  includes supply prices (where available), "talk to
-//  people" scripts, and distances to landmarks that follow.
-
 var Independence = {
 
     name : "Independence",
