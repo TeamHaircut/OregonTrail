@@ -1,8 +1,5 @@
 var game = JSON.parse(window.sessionStorage.game);
 
-//function animateCross()
-//Coding Designs from W3Schools:
-//https://www.w3schools.com/howto/howto_js_animate.asp
 function animateCross() {
   	var crossingImage = document.getElementById("crossingImage");
 
@@ -40,47 +37,61 @@ function getRiverPen(){
 		var rand2 = Math.floor((Math.random()*4) + 1);
 		switch (rand2) {
 				case 1:
-					amount = Math.floor((Math.random()*100) + 1);
-					outcome = " pounds of food.";
-					game.food-=amount;
-					if (game.food < 0){
-						game.food = 0;
+					if(game.food <= 0) {alert("You had no problem crossing the river"); break;} 
+					else {
+						amount = Math.floor((Math.random()*100) + 1);
+						outcome = " pounds of food.";
+						game.food-=amount;
+						if (game.food < 0){
+							game.food = 0;
+						}
+						window.sessionStorage.game = JSON.stringify(game);
+						alert(intro +amount +outcome);
 					}
-					window.sessionStorage.game = JSON.stringify(game);
 					break;
 				case 2:
-					amount = Math.floor((Math.random()*5) + 1);
-					outcome = " sets of clothing.";
-					game.sets-=amount;
-					if (game.sets < 0){
-						game.sets = 0;
+					if(game.sets <= 0) {alert("You had no problem crossing the river"); break;} 
+					else {
+						amount = Math.floor((Math.random()*5) + 1);
+						outcome = " sets of clothing.";
+						game.sets-=amount;
+						if (game.sets < 0){
+							game.sets = 0;
+						}
+						window.sessionStorage.game = JSON.stringify(game);
+						alert(intro +amount +outcome);
 					}
-					window.sessionStorage.game = JSON.stringify(game);
 					break;
 				case 3:
-					amount = Math.floor((Math.random()*2) + 1);
-					outcome = " poles.";
-					game.poles-=amount;
-					if (game.poles < 0){
-						game.poles = 0;
+					if(game.poles <= 0) {alert("You had no problem crossing the river"); break;} 
+					else {
+						amount = Math.floor((Math.random()*2) + 1);
+						outcome = " boxes of bullets.";
+						game.poles-=amount;
+						if (game.poles < 0){
+							game.poles = 0;
+						}
+						window.sessionStorage.game = JSON.stringify(game);
+						alert(intro +amount +outcome);
 					}
-					window.sessionStorage.game = JSON.stringify(game);
 					break;
 				case 4:
-					amount = Math.floor((Math.random()*2) + 1);
-					outcome = " oxen.";
-					game.oxen-=amount;
-					if (game.oxen < 0){
-						game.oxen = 0;
+					if(game.oxen <= 0) {alert("You had no problem crossing the river"); break;} 
+					else {
+						amount = Math.floor((Math.random()*2) + 1);
+						outcome = " oxen.";
+						game.oxen-=amount;
+						if (game.oxen < 0){
+							game.oxen = 0;
+						}
+						window.sessionStorage.game = JSON.stringify(game);
+						alert(intro +amount +outcome);
 					}
-					window.sessionStorage.game = JSON.stringify(game);
 					break;
 				default:
 
 		}
-  		//document.getElementById("river").style.display="block";
-		//document.getElementById("river").innerHTML = intro +amount +outcome;
-        alert(intro +amount +outcome);
+        	//alert(intro +amount +outcome);
 }
 
 function getRiverEvent(){
@@ -95,9 +106,7 @@ function getRiverEvent(){
 			getRiverPen();
 		}
 		else{
-  			//document.getElementById("river").style.display="block";
-			//document.getElementById("river").innerHTML = "You had no problem crossing the river";
-            alert("You had no problem crossing the river");
+            		alert("You had no problem crossing the river");
 		}
 	}
 	else if (game.riverChoice == 2 && game.riverDepth <= 2.5) {
@@ -109,9 +118,7 @@ function getRiverEvent(){
 			getRiverPen();
 		}
 		else{
-  	// 		document.getElementById("river").style.display="block";
-			// document.getElementById("river").innerHTML = "You had no problem crossing the river";
-            alert("You had no problem crossing the river");
+            		alert("You had no problem crossing the river");
 		}
 	}
 	else if (game.riverChoice == 3 && game.riverDepth <= 2.5) {
@@ -120,9 +127,7 @@ function getRiverEvent(){
 			getRiverPen();
 		}
 		else{
-  	// 		document.getElementById("river").style.display="block";
-			// document.getElementById("river").innerHTML = "You had no problem crossing the river";
-            alert("You had no problem crossing the river");
+            		alert("You had no problem crossing the river");
 		}
 	}
 	else{}
