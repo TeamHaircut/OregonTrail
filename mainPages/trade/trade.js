@@ -166,10 +166,10 @@ $(document).ready(function() {
 			var choice = document.getElementById('inputTrade').value; // get chosen value
 			if (e.keyCode == enterKey){ // enter key
 				switch(choice){
-					case 'n': case 'no':
+					case 'n': case 'no': case 'N': case 'No': case 'NO':
 						location.replace("../main.html");
 						break;
-					case 'y': case 'yes':
+					case 'y': case 'yes': case 'Y': case 'Yes': case 'YES':
 						// do trade;
 						game[wItem] -= wants["amount"];
 						game[gItem] += gives["amount"];
