@@ -283,8 +283,11 @@ h1 {
   /*background-image: url("mainPages/trail/images/crossing.png");*/
 }
 #hunter {
+  position: absolute;
   width: 100px;
   height: 100px;
+  margin-left: 0px;
+  margin-top: 0px;
   border-width: 1px;
   border-style: solid;
   border-color: white;
