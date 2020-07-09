@@ -177,21 +177,6 @@ h1 {
 	margin-left: 5em;
 }
 
-.fishing{
-    background-image: url("https://swe.umbc.edu/~fritzk1/OregonTrail/mainPages/images/fishing.png");
-    margin-bottom: 5em;
-    margin-left: 24em;
-}
-/*
-#wagon {
-  position: absolute;
-  width: 238px;
-  height: 87px;
-  margin-left: 130px;
-  margin-top: 30px;
-  background-image: url("mainPages/trail/images/ford.png");
-}
-*/
 #animation {
   position: absolute;
   width: 238px;
@@ -257,6 +242,8 @@ h1 {
   margin-left: 40%;
   margin-top: 350px;
 }
+
+
 
 #riverCrossCanvas {
   /*position: absolute;*/

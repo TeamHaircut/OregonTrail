@@ -139,7 +139,7 @@ $(document).ready(function(){
 							location.replace("talk/talk.html");
 						}
 						else {
-							location.replace("fishing/fishing.html");
+							location.replace("fishing/hunting.html");
 						}
 						break;
 					case 9:
