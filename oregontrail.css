@@ -177,23 +177,6 @@ h1 {
 	margin-left: 5em;
 }
 
-/*.fishing{
-    background-image: url("https://swe.umbc.edu/~fritzk1/OregonTrail/mainPages/images/fishing.png");
-    margin-bottom: 5em;
-    margin-left: 24em;
-}*/
-.hunting{
-}
-/*
-#wagon {
-  position: absolute;
-  width: 238px;
-  height: 87px;
-  margin-left: 130px;
-  margin-top: 30px;
-  background-image: url("mainPages/trail/images/ford.png");
-}
-*/
 #animation {
   position: absolute;
   width: 238px;
@@ -271,42 +254,6 @@ h1 {
   height: 600px;
   /*margin-left: auto;*/
   background-image: url("mainPages/trail/images/crossing.png");
-}
-
-#huntingCanvas {
-  position: absolute;
-  border-width: 10px;
-  border-style: solid;
-  border-color: white;
-  width: 1000px;
-  height: 600px;
-  /*background-image: url("mainPages/trail/images/crossing.png");*/
-}
-#hunter {
-  width: 100px;
-  height: 100px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
-  background-image: url("mainPages/fishing/images/hunterRight.png");
-}
-#tree{
-  position: relative;
-  width: 125px;
-  height: 125px;
-  background-image: url("mainPages/fishing/images/tree.png");
-}
-#tree1{
-  position: relative;
-  width: 125px;
-  height: 125px;
-  background-image: url("mainPages/fishing/images/tree.png");
-}
-#tree2{
-  position: relative;
-  width: 125px;
-  height: 125px;
-  background-image: url("mainPages/fishing/images/tree.png");
 }
 
 .trailCanvas{
