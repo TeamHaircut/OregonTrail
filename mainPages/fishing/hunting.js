@@ -161,6 +161,9 @@ function hunter(width,height,color,x,y) {
 		ctx.fillStyle = color;
 		ctx.fillRect(this.x,this.y,this.width,this.height);
 		ctx.drawImage(this.myImage,this.x,this.y);
+		ctx.font = "20px Here Lies MECC Regular";
+		ctx.fillStyle = "white";
+		ctx.fillText("Bullets = "+(this.bulletsAvailable - this.bulletCount),10,590);
 		if (this.x < 0) {
 			this.x += 1; this.speedX = 0; this.speedY = 0;
 		}
