@@ -1,14 +1,12 @@
 var myGamePiece;
 var myObstacles = [];
 var trees;
-//var myAnimal;
 var myAnimals = [];
 var animals = 4;
 
 function startGame() {
 	myGameArea.start();
 	myGamePiece = new hunter(73,78,"black",10,10);//73,78
-	//myAnimal = new animal(70,50,"black",-100,480,1,-1);
 	trees = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
 	for (i = 0; i < trees; i += 1) {
 		var x = Math.floor(Math.random() * (myGameArea.canvas.width - 250))+125;
@@ -392,10 +390,6 @@ function updateGameArea() {
 			}
 		}
 	
-		//if (myAnimal.crashWith(myObstacles[i])) {
-		//	myAnimal.speedX = -1*myAnimal.speedX;
-		//	myAnimal.speedY = -1*myAnimal.speedY;
-		//}
 		if (myGamePiece.crashWith(myObstacles[i])) {
 			if (myGamePiece.speedX == 1) {
 				myGamePiece.stop(); myGamePiece.availableMoves = 0; myGamePiece.x -=1;
@@ -458,12 +452,6 @@ function updateGameArea() {
 		myAnimals[i].draw();
 	}
 
-	//if (!myAnimal.dead) {
-	//	myAnimal.newPos();
-	//}
-	//myAnimal.update();
-	//myAnimal.draw();
-
 	myGamePiece.newPos();
 	myGamePiece.update();
 	myGamePiece.draw();
@@ -497,9 +485,6 @@ function updateGameArea() {
 			}
 		}
 
-		//if (myAnimal.crashWith(myGamePiece.myBullets[i])) {
-		//	myAnimal.dead = true; myGamePiece.myBullets[i].hit = true;
-		//}
 		if (!myGamePiece.myBullets[i].hit) {
 			myGamePiece.myBullets[i].newPos();
 			myGamePiece.myBullets[i].update();
