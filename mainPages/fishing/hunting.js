@@ -2,7 +2,7 @@ var myGamePiece;
 var myObstacles = [];
 var trees;
 var myAnimals = [];
-var animals = 4;
+var animals = 3;
 
 function startGame() {
 	myGameArea.start();
@@ -16,22 +16,30 @@ function startGame() {
 	for (i = 0; i < animals; i += 1) {
 		//               Math.floor(Math.random() * (max - min + 1)) + min;
 		var cond = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
-		//console.log(cond);
+		var type = Math.floor(Math.random() * (5 - 1 +1)) + 1;
+			/*
+				1 - squirrel
+				2 - rabbit
+				3 - bison
+				4 - deer
+				5 - bear
+			*/
+		console.log(cond);
 		switch(cond) {
 			case 1://leftside
-				var x = Math.floor(Math.random() * (0 - -200 + 1)) + -200;
+				var x = Math.floor(Math.random() * (-60 - -200 + 1)) + -200;//-60 to cover image width
 				var y = Math.floor(Math.random() * (800 - -200 + 1)) + -200;
 				var speedX = 1;
 				var speedY = Math.floor(Math.random() * (1 - -1 + 1)) + -1;
-				myAnimals.push(new animal(70,50,"black",x,y,speedX,speedY));console.log("1");
+				myAnimals.push(new animal(type,70,50,"black",x,y,speedX,speedY));//console.log("1");
 				break;
 
 			case 2://top
 				var x = Math.floor(Math.random() * (1200 - -200 + 1)) + -200;
-				var y = Math.floor(Math.random() * (0 - -200 + 1)) + -0;
+				var y = Math.floor(Math.random() * (-60 - -200 + 1)) + -200;//-60 to cover image hieght
 				var speedY = 1;
 				var speedX = Math.floor(Math.random() * (1 - -1 + 1)) + -1;
-				myAnimals.push(new animal(70,50,"black",x,y,speedX,speedY));//console.log("2");
+				myAnimals.push(new animal(type,70,50,"black",x,y,speedX,speedY));//console.log("2");
 				break;
 
 			case 3://rightside
@@ -39,15 +47,15 @@ function startGame() {
 				var y = Math.floor(Math.random() * (800 - -200 + 1)) + -200;
 				var speedX = -1;
 				var speedY = Math.floor(Math.random() * (1 - -1 + 1)) + -1;
-				myAnimals.push(new animal(70,50,"black",x,y,speedX,speedY));//console.log("3");
+				myAnimals.push(new animal(type,70,50,"black",x,y,speedX,speedY));//console.log("3");
 				break;
 
 			case 4://bottom
 				var x = Math.floor(Math.random() * (1200 - -200 + 1)) + -200;
 				var y = Math.floor(Math.random() * (800 - 600 + 1)) + 600;
-				var speedY = 1;
+				var speedY = -1;
 				var speedX = Math.floor(Math.random() * (1 - -1 + 1)) + -1;
-				myAnimals.push(new animal(70,50,"black",x,y,speedX,speedY));//console.log("4");
+				myAnimals.push(new animal(type,70,50,"black",x,y,speedX,speedY));//console.log("4");
 				break;
 		}	
 	}
@@ -302,7 +310,7 @@ function bullet(width,height,color,x,y) {
 	}
 }
 
-function animal(width,height,color,x,y,speedX,speedY) {
+function animal(type,width,height,color,x,y,speedX,speedY) {
 	this.gamearea = myGameArea;
 	this.width = width;
 	this.height = height;
@@ -311,7 +319,15 @@ function animal(width,height,color,x,y,speedX,speedY) {
 	this.x = x;
 	this.y = y;
 	this.dead = false;
-
+	this.type = type;
+	/*
+		1 - squirrel
+		2 - rabbit
+		3 - bison
+		4 - deer
+		5 - bear
+	*/
+	this.meat = 0;
 	this.sheet = new SpriteSheet('images/oxRight.png',238,87);
 	this.sheet2 = new SpriteSheet('images/oxLeft.png',238,87);
 	this.sheet3 = new SpriteSheet('images/oxRight.png',238,87);
@@ -320,21 +336,51 @@ function animal(width,height,color,x,y,speedX,speedY) {
 	this.walkAnimDead = new Animation(this.sheet3,0,0,2);
 	this.anim = this.walkAnimRight;
 
+	switch(this.type) {
+		case 1:
+			this.meat = Math.floor(Math.random() * (3 - 1 + 1)) + 1;//1-3
+			break;
+		case 2:
+			this.meat = Math.floor(Math.random() * (8 - 3 + 1)) + 3;//3-8
+			break;
+		case 3:
+			this.meat = Math.floor(Math.random() * (1000 - 800 + 1)) + 800;//800-1000
+			break;
+		case 4:
+			this.meat = Math.floor(Math.random() * (120 - 80 + 1)) + 80;//80-120
+			break;
+		case 5:
+			this.meat = Math.floor(Math.random() * (350 - 230 + 1)) + 230;//230-350
+			break;
+	}
+
 	this.update = function(){
 		ctx = myGameArea.context;
 		ctx.fillStyle = color;
 		ctx.fillRect(this.x,this.y,this.width,this.height);
-		if(this.speedX == -1) {
-			this.anim = this.walkAnimLeft;
-		}
-		else if (this.speedX == 1) {
+		if(this.speedX == 1 && this.speedY == 1) {
 			this.anim = this.walkAnimRight;
 		}
-		if(this.speedY == -1) {
+		else if (this.speedX == 1 && this.speedY == -1) {
 			this.anim = this.walkAnimRight;
 		}
-		else if (this.speedY == 1) {
+		else if(this.speedX == -1 && this.speedY == 1) {
 			this.anim = this.walkAnimLeft;
+		}
+		else if (this.speedX == -1 && this.speedY == -1) {
+			this.anim = this.walkAnimLeft;
+		}
+		else if (this.speedX == 1 && this.speedY == 0) {
+			this.anim = this.walkAnimRight;
+		}
+		else if (this.speedX == -1 && this.speedY == 0) {
+			this.anim = this.walkAnimLeft;
+		}
+		else if (this.speedX == 0 && this.speedY == 1) {
+			this.anim = this.walkAnimLeft;
+		}
+		else if (this.speedX == 0 && this.speedY == -1) {
+			this.anim = this.walkAnimRight;
 		}
 		if(this.dead) {
 			this.anim = this.walkAnimDead;
@@ -481,6 +527,7 @@ function updateGameArea() {
 
 		for (j = 0; j < animals; j += 1) {
 			if (myAnimals[j].crashWith(myGamePiece.myBullets[i])) {
+				if(!myAnimals[j].dead) {alert(myAnimals[j].meat);}
 				myAnimals[j].dead = true; myGamePiece.myBullets[i].hit = true;
 			}
 		}
