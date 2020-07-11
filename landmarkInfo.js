@@ -5,7 +5,7 @@ var Independence = {
     prices : {
         ox : 20,
         clothing : 10,
-        pole : 2,
+        ammunition : 2,
         wheel : 10,
         axle : 10,
         tongue : 10,
@@ -94,7 +94,7 @@ var KearneyF = {
    prices : {
        ox : 25,
        clothing : 12.50,
-       pole : 2.50,
+       ammunition : 2.50,
        wheel : 12.50,
        axle : 12.50,
        tongue : 12.50,
@@ -156,7 +156,7 @@ var LaramieF = {
    prices : {
        ox : 30,
        clothing : 15,
-       pole : 3,
+       ammunition : 3,
        wheel : 15,
        axle : 15,
        tongue : 15,
@@ -272,7 +272,7 @@ var BridgerF = {
    prices : {
        ox : 35,
        clothing : 17.50,
-       pole : 3.50,
+       ammunition : 3.50,
        wheel : 17.50,
        axle : 17.50,
        tongue : 17.50,
@@ -334,7 +334,7 @@ var HallF = {
    prices : {
        ox : 40,
        clothing : 20,
-       pole : 4,
+       ammunition : 4,
        wheel : 20,
        axle : 20,
        tongue : 20,
@@ -396,7 +396,7 @@ var BoiseF = {
    prices : {
        ox : 45,
        clothing : 22.50,
-       pole : 4.50,
+       ammunition : 4.50,
        wheel : 22.50,
        axle : 22.50,
        tongue : 22.50,
@@ -458,7 +458,7 @@ var WallaF = {
    prices : {
        ox : 50,
        clothing : 25,
-       pole : 5,
+       ammunition : 5,
        wheel : 25,
        axle : 25,
        tongue : 25,

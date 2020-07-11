@@ -60,8 +60,8 @@ function calculateHealth(game) {
         case "rest":
             paceEffect += 1;
             break;
-        case "trade": case "fish":
-            // paceEffect is 0 for trading and fishing
+        case "trade": case "hunt":
+            // paceEffect is 0 for trading and hunting
             break;
         case "steady":
             paceEffect -= 1;
@@ -378,7 +378,7 @@ function oxenStatus(game) {
 function robbed(game) {
 	var foodCount = game.food;
 	var clothingCount = game.sets;
-	var poleCount = game.poles;
+	var ammunitionCount = game.ammunition;
 	var oxenCount = game.oxen;
 	var displayProperty = "block";
 	var rand = Math.random();
@@ -411,13 +411,13 @@ function robbed(game) {
 					}
 					break;
 				case 3:
-					if(poleCount <= 0) {displayProperty = "none";}
+					if(ammunitionCount <= 0) {displayProperty = "none";}
 					else {
-						amount = Math.floor((Math.random()*poleCount) + 1);
+						amount = Math.floor((Math.random()*ammunitionCount) + 1);
 						outcome = " boxes of bullets.";
-						game.poles-=amount;
-						if (game.poles < 0){
-							game.poles = 0;
+						game.ammunition-=amount;
+						if (game.ammunition < 0){
+							game.ammunition = 0;
 						}
 					}
 					break;

@@ -63,13 +63,13 @@ function getRiverPen(){
 					}
 					break;
 				case 3:
-					if(game.poles <= 0) {alert("You had no problem crossing the river"); break;} 
+					if(game.ammunition <= 0) {alert("You had no problem crossing the river"); break;} 
 					else {
 						amount = Math.floor((Math.random()*2) + 1);
 						outcome = " boxes of bullets.";
-						game.poles-=amount;
-						if (game.poles < 0){
-							game.poles = 0;
+						game.ammunition-=amount;
+						if (game.ammunition < 0){
+							game.ammunition = 0;
 						}
 						window.sessionStorage.game = JSON.stringify(game);
 						alert(intro +amount +outcome);

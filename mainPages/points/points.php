@@ -107,9 +107,9 @@
 				<td id="clothingPts"></td>
 			</tr>
 			<tr>
-				<td id="pole"></td>
+				<td id="ammunition"></td>
 				<td>boxes of ammunition</td>
-				<td id="polePts"></td>
+				<td id="ammunitionPts"></td>
 			</tr>
 			<tr>
 				<td id="food"></td>

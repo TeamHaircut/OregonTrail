@@ -1,13 +1,13 @@
 var enterKey = 13;
 var spaceKey = 32;
 
-var items = ["oxen", "sets", "poles", "wheels", "axles", "tongues", "food"];
+var items = ["oxen", "sets", "ammunition", "wheels", "axles", "tongues", "food"];
 
 // all askances must be carry-able, at least
 var askLimits = {
 	"oxen" : 5 ,
 	"sets" :  5 ,
-	"poles" : 5 ,
+	"ammunition" : 5 ,
 	"wheels" : 3 ,
 	"axles" : 3 ,
 	"tongues" : 3 ,
@@ -18,7 +18,7 @@ var askLimits = {
 var supplyLimits = {
 	"oxen" : 20 ,
 	"sets" : null ,
-	"poles" : null ,
+	"ammunition" : null ,
 	"wheels" : 3 ,
 	"axles" : 3 ,
 	"tongues" : 3 ,
@@ -110,7 +110,7 @@ $(document).ready(function() {
 	$("#oxen").text(game.oxen);
 	$("#food").text(game.food);
 	$("#sets").text(game.sets);
-	$("#poles").text(game.poles);
+	$("#ammunition").text(game.ammunition);
 	$("#axles").text(game.axles);
 	$("#wheels").text(game.wheels);
 	$("#tongues").text(game.tongues);
