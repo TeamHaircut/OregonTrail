@@ -1,10 +1,46 @@
+var game = JSON.parse(window.sessionStorage.game);
 var myGamePiece;
 var myObstacles = [];
 var trees;
 var myAnimals = [];
 var animals = 3;
+var sessionMeat = 0;
 
 function startGame() {
+	game.poles -= 1;
+	var start = 100;
+	var time = setInterval(frame,15);
+	function frame() {
+		console.log(start);
+		if(start == -500) {//sessionLength
+			clearInterval(time);
+			
+			if(sessionMeat != 0) {
+				if(game.food == 2000) {
+					alert("From the animals you shot, you got " + sessionMeat + " pounds of meat. However you were not able to carry any back to the wagon" );
+				}
+				if(sessionMeat + game.food > 2000) {
+					var haul = 2000 - game.food;
+					game.food = 2000;
+					alert("From the animals you shot, you got " + sessionMeat + " pounds of meat. However you were only able to carry " + haul + " back to the wagon" );
+				}
+				else {
+					alert("From the animals you shot, you got " + sessionMeat + " pounds of meat.");
+					game.food += sessionMeat;
+				}
+			}
+			else {
+					alert("You were unable to shoot any food.");
+			}
+			window.sessionStorage.game = JSON.stringify(game);
+			location.replace("../trail/trail.html");
+			
+		}
+		else {
+			start--;
+		}
+	}
+
 	myGameArea.start();
 	myGamePiece = new hunter(73,78,"black",10,10);//73,78
 	trees = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
@@ -338,7 +374,7 @@ function animal(type,width,height,color,x,y,speedX,speedY) {
 
 	switch(this.type) {
 		case 1:
-			this.meat = Math.floor(Math.random() * (3 - 1 + 1)) + 1;//1-3
+			this.meat = Math.floor(Math.random() * (3 - 2 + 1)) + 2;//2-3
 			break;
 		case 2:
 			this.meat = Math.floor(Math.random() * (8 - 3 + 1)) + 3;//3-8
@@ -527,7 +563,7 @@ function updateGameArea() {
 
 		for (j = 0; j < animals; j += 1) {
 			if (myAnimals[j].crashWith(myGamePiece.myBullets[i])) {
-				if(!myAnimals[j].dead) {alert(myAnimals[j].meat);}
+				if(!myAnimals[j].dead) {sessionMeat = sessionMeat + myAnimals[j].meat;}
 				myAnimals[j].dead = true; myGamePiece.myBullets[i].hit = true;
 			}
 		}
