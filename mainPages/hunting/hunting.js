@@ -7,7 +7,15 @@ var animals = 3;
 var sessionMeat = 0;
 
 function startGame() {
-	game.poles -= 1;
+	//TODO HNT-0010
+	if(game.ammunition == 0) {
+		alert("You do not have any ammunition to hunt with.");
+		location.replace("../trail/trail.html");
+	}
+	//TODO end
+	if (game.ammunition > 0) {
+		game.ammunition -=1;
+	}
 	var start = 100;
 	var time = setInterval(frame,15);
 	function frame() {
@@ -32,6 +40,13 @@ function startGame() {
 			else {
 					alert("You were unable to shoot any food.");
 			}
+			calcDays(1,game);
+			var savePace = game.pace;
+			game.pace = "hunt";
+			calculateHealth(game)
+			game.pace = savePace;
+			game.weather = updateWeather(game.month);
+			game.water = waterStatus();
 			window.sessionStorage.game = JSON.stringify(game);
 			location.replace("../trail/trail.html");
 			

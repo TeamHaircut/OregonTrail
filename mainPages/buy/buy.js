@@ -28,14 +28,14 @@ function getPrices(location) {
 var supplyLimits = {
 	"oxen" : 20 ,
 	"sets" : null ,
-	"poles" : null ,
+	"ammunition" : null ,
 	"wheels" : 3 ,
 	"axles" : 3 ,
 	"tongues" : 3 ,
 	"food" : 2000
 };
 
-var items = ["itemslist", "oxen", "sets", "poles", "wheels", "axles", "tongues", "food"];
+var items = ["itemslist", "oxen", "sets", "ammunition", "wheels", "axles", "tongues", "food"];
 
 $(document).ready(function () {
 
@@ -44,7 +44,7 @@ $(document).ready(function () {
 	// whatever the current location variable is
 	var prices = getPrices(game.location);
 
-	var priceList = [-1, prices.ox, prices.clothing, prices.pole, prices.wheel, prices.axle, prices.tongue, prices.food];
+	var priceList = [-1, prices.ox, prices.clothing, prices.ammunition, prices.wheel, prices.axle, prices.tongue, prices.food];
 
 	var itemSelect = 0;
 	var amountNum = 0;
@@ -58,7 +58,7 @@ $(document).ready(function () {
 	// set prices
 	$("#oxPrice").text(prices.ox.toFixed(2).toString());
 	$("#clothingPrice").text(prices.clothing.toFixed(2).toString());
-	$("#polePrice").text(prices.pole.toFixed(2).toString());
+	$("#ammunitionPrice").text(prices.ammunition.toFixed(2).toString());
 	$("#wheelPrice").text(prices.wheel.toFixed(2).toString());
 	$("#axlePrice").text(prices.axle.toFixed(2).toString());
 	$("#tonguePrice").text(prices.tongue.toFixed(2).toString());

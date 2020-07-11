@@ -90,14 +90,14 @@ document.getElementById('part').innerHTML = part;
 document.getElementById('partPts').innerHTML = part*2;
 document.getElementById('clothing').innerHTML = game.sets;
 document.getElementById('clothingPts').innerHTML = game.sets*2;
-document.getElementById('pole').innerHTML = game.poles;
-document.getElementById('polePts').innerHTML = game.poles*1;
+document.getElementById('ammunition').innerHTML = game.ammunition;
+document.getElementById('ammunitionPts').innerHTML = game.ammunition*1;
 document.getElementById('food').innerHTML = game.food;
 document.getElementById('foodPts').innerHTML = Math.floor(game.food/25);
 document.getElementById('cash').innerHTML = '$'+game.money.toFixed(2)+ '';
 document.getElementById('cashPts').innerHTML = Math.floor(game.money.toFixed(2)/5);
-document.getElementById('totalPts').innerHTML = jobMulti*((goodPts)+(fairPts)+(poorPts)+(vpoorPts)+(game.oxen*4)+(part*2)+(game.sets*2)+(game.poles*1)+(Math.floor(game.food/25))+(Math.floor(game.money.toFixed(2)/5)));
-total = jobMulti*((goodPts)+(fairPts)+(poorPts)+(vpoorPts)+(game.oxen*4)+(part*2)+(game.sets*2)+(game.poles*1)+(Math.floor(game.food/25))+(Math.floor(game.money.toFixed(2)/5)));
+document.getElementById('totalPts').innerHTML = jobMulti*((goodPts)+(fairPts)+(poorPts)+(vpoorPts)+(game.oxen*4)+(part*2)+(game.sets*2)+(game.ammunition*1)+(Math.floor(game.food/25))+(Math.floor(game.money.toFixed(2)/5)));
+total = jobMulti*((goodPts)+(fairPts)+(poorPts)+(vpoorPts)+(game.oxen*4)+(part*2)+(game.sets*2)+(game.ammunition*1)+(Math.floor(game.food/25))+(Math.floor(game.money.toFixed(2)/5)));
 
 
 

@@ -66,7 +66,7 @@ $(document).ready(function(){
 
 	// Calculate the user's total bill, then put it on the main options page
 	function calculateNewBill() {
-		totalBill = numOxen * oxenPrice + numFood * foodPrice + numClothing * clothingPrice + numPoles * polePrice + (numWheels + numAxles + numTongues) * partsPrice;
+		totalBill = numOxen * oxenPrice + numFood * foodPrice + numClothing * clothingPrice + numAmmunition * ammunitionPrice + (numWheels + numAxles + numTongues) * partsPrice;
 		$("#storeTable")[0].rows[7].cells[1].innerHTML = "$" + (totalBill.toFixed(2)).toString();
 	}
 
@@ -117,7 +117,7 @@ $(document).ready(function(){
 	        		game.oxen = numOxen * 2; // 2 oxen = 1 yoke
 					game.food = numFood;
 					game.sets = numClothing;
-					game.poles = numPoles;
+					game.ammunition = numAmmunition;
 					game.wheels = numWheels;
 					game.axles = numAxles;
 					game.tongues = numTongues;
@@ -162,7 +162,7 @@ $(document).ready(function(){
 							displayNewPage("#buyClothing", "#inputBuyClothing", "clothingPage");
 							break;
 						case 4:
-							displayNewPage("#buyPoles", "#inputBuyPoles", "polesPage");
+							displayNewPage("#buyAmmunition", "#inputBuyAmmunition", "ammunitionPage");
 							break;
 						case 5:
 							displayNewPage("#buyWheels", "#inputBuyWheels", "wheelsPage");
@@ -190,9 +190,9 @@ $(document).ready(function(){
 				numClothing = getValuesAndSetupHomepage("#inputBuyClothing", clothingPrice, 0, 99, 2);
 				checkValue(numClothing, "#buyClothing");
 			} // end currentPage if
-			else if(currentPage == "polesPage"){
-				numPoles = getValuesAndSetupHomepage("#inputBuyPoles", polePrice, 0, 99, 3);
-				checkValue(numPoles, "#buyPoles");
+			else if(currentPage == "ammunitionPage"){
+				numAmmunition = getValuesAndSetupHomepage("#inputBuyAmmunition", ammunitionPrice, 0, 99, 3);
+				checkValue(numAmmunition, "#buyAmmunition");
 			} // end currentPage if
 			else if(currentPage == "wheelsPage"){
 				numWheels = getValuesAndSetupHomepage("#inputBuyWheels", partsPrice, 0, 3, 4);
@@ -238,7 +238,7 @@ $(document).ready(function(){
         		game.oxen = numOxen * 2; // 2 oxen = 1 yoke
 				game.food = numFood;
 				game.sets = numClothing;
-				game.poles = numPoles;
+				game.ammunition = numAmmunition;
 				game.wheels = numWheels;
 				game.axles = numAxles;
 				game.tongues = numTongues;
@@ -262,7 +262,7 @@ $(document).ready(function(){
 
   var currentPage = "mainPage"; // initially main options are displayed, keep track of the current page that the user is on
   var spacebarKey = 32, enterKey = 13;
-  var numOxen = 0, numFood = 0, numClothing = 0, numPoles = 0, numWheels = 0, numAxles = 0, numTongues = 0;
-  var oxenPrice = 40, foodPrice = 0.2, clothingPrice = 10, polePrice = 2, partsPrice = 10;
+  var numOxen = 0, numFood = 0, numClothing = 0, numAmmunition = 0, numWheels = 0, numAxles = 0, numTongues = 0;
+  var oxenPrice = 40, foodPrice = 0.2, clothingPrice = 10, ammunitionPrice = 2, partsPrice = 10;
   var totalBill = 0.00;
 });

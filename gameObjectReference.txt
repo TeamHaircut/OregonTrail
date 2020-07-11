@@ -17,7 +17,7 @@ game object keys : values {
     oxen : int
     food : int
     sets : int  // this is clothing
-    poles : int
+    ammunition : int
     wheels : int
     tongues : int
     axles : int
