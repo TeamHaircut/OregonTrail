@@ -411,7 +411,7 @@ function animal(type,width,height,color,x,y,speedX,speedY) {
 
 	this.update = function(){
 		ctx = myGameArea.context;
-		ctx.fillStyle = "green";
+		ctx.fillStyle = color;
 		ctx.globalAlpha = 0.0;
 		ctx.fillRect(this.x,this.y,this.width,this.height);
 		ctx.globalAlpha = 1.0;
