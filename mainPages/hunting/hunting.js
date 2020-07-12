@@ -152,7 +152,9 @@ function component(width,height,color,x,y) {
 	this.update = function(){
 		ctx = myGameArea.context;
 		ctx.fillStyle = color;
+		ctx.globalAlpha = 0.0;
 		ctx.fillRect(this.x,this.y,this.width,this.height);
+		ctx.globalAlpha = 1.0;
 		ctx.drawImage(this.myImage,x,y);
 	}
 	this.newPos = function() {
@@ -216,7 +218,9 @@ function hunter(width,height,color,x,y) {
 	this.update = function(){
 		ctx = myGameArea.context;
 		ctx.fillStyle = color;
+		ctx.globalAlpha = 0.0;
 		ctx.fillRect(this.x,this.y,this.width,this.height);
+		ctx.globalAlpha = 1.0;
 		ctx.drawImage(this.myImage,this.x,this.y);
 		ctx.font = "20px Here Lies MECC Regular";
 		ctx.fillStyle = "white";
@@ -408,7 +412,9 @@ function animal(type,width,height,color,x,y,speedX,speedY) {
 	this.update = function(){
 		ctx = myGameArea.context;
 		ctx.fillStyle = color;
+		ctx.globalAlpha = 0.0;
 		ctx.fillRect(this.x,this.y,this.width,this.height);
+		ctx.globalAlpha = 1.0;
 		if(this.speedX == 1 && this.speedY == 1) {
 			this.anim = this.walkAnimRight;
 		}
